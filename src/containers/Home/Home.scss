@@ -1,0 +1,184 @@
+@use "../../styles/variables" as *;
+
+.home-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 2rem;
+  color: white; /* Ensure text is readable over the background */
+
+//   &__name {
+//     font-size: 3rem;
+//     margin: 0.5rem 0;
+//   }
+
+//   &__overview {
+//     font-size: 1.5rem;
+//     margin: 0.5rem 0;
+//   }
+
+//   @media (max-width: 768px) {
+//     &__name {
+//       font-size: 4rem;
+//     }
+
+//     &__overview {
+//       font-size: 2rem;
+//     }
+//   }
+
+//   @media (max-width: 480px) {
+//     &__name {
+//       font-size: 2.7rem;
+//     }
+
+//     &__overview {
+//       font-size: 1.2rem;
+//     }
+//   }
+}
+//   @media (max-width: 768px) {
+//     .home-content {
+//       &__name {
+       
+//       }
+
+//       &__overview {
+       
+//       }
+//     }
+//   }
+
+//   @media (max-width: 480px) {
+//     .home-content {
+//       &__name {
+        
+//       }
+
+//       &__overview {
+
+//       }
+//     }
+//   }
+
+  
+  
+  
+
+// #root {
+//   max-width: 1280px;
+//   margin: 0 auto;
+//   padding: 2rem;
+//   text-align: center;
+// }
+
+// body {
+//   margin: 0;
+//   padding: 0;
+//   background: linear-gradient(160deg, $color-black 10%, $color-black 60%, $color-secondary 100%);
+//   //background: linear-gradient(160deg, $color-black 25%, lighten($color-black, 20%) 40%, lighten($color-secondary, 20%) 60%, $color-secondary 75%);
+//   position: relative;
+
+//   &::before {
+//     content: '';
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100%; 
+//     height: 100%; 
+//     background: url('./assets/images/valeria-reverdo-dwy2meBFqW8-unsplash.jpg') repeat;
+//     background-size: cover; 
+//     opacity: 0.45; 
+//     z-index: -1; 
+//   }
+
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   min-height: 100vh;
+// }
+
+// // .overview {
+// //   margin-top: 1.5rem;
+// // }
+
+// #background-image {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 40rem; /* Adjust width as needed */
+//   height: 60rem; /* Adjust height as needed */
+//   background: url('./assets/images/me.jpg') no-repeat top left;
+//   background-size: cover;
+//   filter: blur(0.3rem); /* Adjust blur as needed */
+//   clip-path: circle(100% at 50% 50%);
+//   opacity: 0.7; /* Adjust opacity as needed */
+//   mask-image: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+//   -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)); /* For Safari */
+//   z-index: 0; /* Ensure it is behind other content */
+// }
+
+// .name, .overview {
+//   position: relative;
+//   z-index: 1; /* Ensure text is above the image */
+// }
+
+// .name {
+//   text-align: center;
+//   margin-top: 100px; /* Adjust as needed to avoid overlap */
+// }
+
+// .overview {
+//   text-align: center;
+//   margin-top: 20px;
+// }
+
+// .page-container--home-page {
+//  // position: relative;
+//   //z-index: 1;
+//  // min-height: 100vh;
+  
+// }
+
+
+//----------------------------------------------no image
+
+// #background-image {
+//     position: absolute;
+//     top: 1rem;
+//     left: 1.5rem;
+//     width: 40rem; /* Adjust width as needed */
+//     height: 60rem; /* Adjust height as needed */
+//     background: url('./assets/images/me.jpg') no-repeat top left;
+//     background-size: cover;
+//     filter: blur(0.3rem); /* Adjust blur as needed */
+//     clip-path: circle(100% at 50% 50%);
+//     opacity: 0.5; /* Adjust opacity as needed */
+//     mask-image: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+//     -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)); /* For Safari */
+//     z-index: 0; /* Ensure it is behind other content */
+//   }
+  
+  // #background-image {
+  //   position: absolute;
+  //   top: 1rem;
+  //   left: 1.5rem;
+  //   width: 40rem; /* Adjust width as needed */
+  //   height: 60rem; /* Adjust height as needed */
+  //   background: url('./assets/images/me.jpg') no-repeat top left;
+  //   background-size: cover;
+  //   filter: blur(0.3rem); /* Adjust blur as needed */
+  //   clip-path: circle(100% at 50% 50%);
+  //   opacity: 0.5; /* Adjust opacity as needed */
+  //   z-index: 0; /* Ensure it is behind other content */
+  // }
+  
+  // .name {
+  //   text-align: center;
+  //   margin-top: 100px; /* Adjust as needed to avoid overlap */
+  // }
+  
+  // .overview {
+  //   text-align: center;
+  //   margin-top: 20px;
+  // }

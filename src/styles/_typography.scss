@@ -1,0 +1,58 @@
+@use "./variables" as *;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=M+PLUS+1+Code:wght@100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gudea:ital,wght@0,400;0,700;1,400&family=Major+Mono+Display&family=News+Cycle:wght@400;700&display=swap');
+
+
+:root {
+    line-height:1.5;
+    font-weight: 400;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+    font-family:'abel' , 'NewsCycle', 'sans-serif', 'segoe UI', 'Roboto';
+}
+
+h1 {
+    font-family: 'abel';
+    color:$color-white;
+    font-size: 9rem;
+    line-height:1.1;
+}
+
+h2 {
+    font-family: 'abel';
+    color: $color-white;
+    font-size: 4rem;
+}
+
+a {
+    font-weight: 500;
+    color: $color-primary;
+    text-decoration: inherit;
+  }
+  
+  a:hover {
+    color: $color-primary-hover;
+  }
+
+//   @media (prefers-color-scheme: light) {
+//     :root {
+//       color: $color-text-light;
+//       background-color: $color-background-light;
+//     }
+  
+//     a:hover {
+//       color: lighten($color-primary, 20%);
+//     }
+  
+//     button {
+//       background-color: $color-secondary;
+//     }
+//   }
