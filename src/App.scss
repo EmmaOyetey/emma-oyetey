@@ -9,7 +9,7 @@ html, body {
 }
 
 body {
-  background: linear-gradient(160deg, $color-black 10%, $color-black 60%, $color-secondary 100%);
+  background: linear-gradient(160deg, $color-black 20%, $color-black 70%, $color-secondary 100%);
   position: relative;
   min-height: 100%;
   overflow: hidden; /* Ensure no scrollbars appear due to the fixed background image */
@@ -23,11 +23,11 @@ body {
     height: 100%;
     background: url('./assets/images/valeria-reverdo-dwy2meBFqW8-unsplash.jpg') no-repeat center center;
     background-size: cover;
-    opacity: 0.45;
+    opacity: 0.8;
     z-index: -1;
   }
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  //display: flex;
+  //justify-content: center;
+  //align-items: center;
 }

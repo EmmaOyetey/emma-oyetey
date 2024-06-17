@@ -1,6 +1,6 @@
 
 import './Home.scss'
-import myImage from "../../assets/images/me.jpg"
+//import myImage from "../../assets/images/me.jpg"
 const Home =() => {
 
     
