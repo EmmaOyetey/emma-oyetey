@@ -10,9 +10,12 @@ html, body {
 
 body {
   background: linear-gradient(160deg, $color-black 20%, $color-black 70%, $color-secondary 100%);
-  position: relative;
+ // position: absolute;
   min-height: 100%;
-  overflow: hidden; /* Ensure no scrollbars appear due to the fixed background image */
+  width: auto;
+  //overflow: hidden; /* Ensure no scrollbars appear due to the fixed background image */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 
   &::before {
     content: '';
@@ -25,6 +28,9 @@ body {
     background-size: cover;
     opacity: 0.8;
     z-index: -1;
+    //background-repeat: no-repeat;
+    background-attachment: fixed;
+    
   }
 
   //display: flex;
