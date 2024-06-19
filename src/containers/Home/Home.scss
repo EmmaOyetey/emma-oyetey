@@ -1,106 +1,226 @@
 @use "../../styles/variables" as *;
 
-.home-content {
-  position: relative;
-  z-index: 1;
-  text-align: center;
+.home {
+  color: $color-white;
   padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height:100vh;
+  margin: 1rem;
+
+  &__landing-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+  }
 
   &__name {
-    margin: 0.5rem 0;
+    font-size: 25rem;
+    margin-bottom: 2rem;
   }
 
   &__overview {
-    margin: 0.5rem 0;
+    font-size: 7rem;
   }
 
-  @media (max-width: 768px) {
+  &__more-info {
+    display: flex;
+    //flex-direction: column;
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    opacity: 0;
+    transform: translateY(20px);
+    padding-bottom: 20rem;
+
+    &.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  &__image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // background-color: rgba(255, 255, 255, 0.08); /* more transparent white */
+    //  backdrop-filter: blur(8px); /* apply blur for frosted glass effect */
+    //margin-bottom: 2rem;
+  }
+
+  &__image {
+    width: 75%;
+    height: auto;
+    object-fit: contain;
+    filter: blur(0.05rem);
+    opacity: 0.7;
+    mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0) 70%);
+    -webkit-mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0) 70%);
+    //padding-left: 3rem;
+  }
+
+  &__content {
+    //padding-right: 3rem;
+    margin-right: 9rem;
+    width: 100%;
+    // display: flex;
+    // flex-direction: row;
+    // justify-content: space-around;
+  }
+
+  &__content-section {
+    &--about,
+    &--experience {
+      display: flex;
+      //flex-direction: column;
+      // background-color: rgba(255, 255, 255, 0.09); /* more transparent white */
+      // backdrop-filter: blur(10px); /* apply blur for frosted glass effect */
+      border-radius: 20px;
+      padding: 5rem;
+      margin-bottom: 2rem;
+      border: 1px dotted #76e1e1; /* optional: add a subtle border */
+      // border: 1px solid rgba(255, 255, 255, 0.18);
+      // box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), /* shadow for 3D effect */
+      // 0 1px 3px rgba(0, 0, 0, 0.08);
+    }
+
+    // a {
+    //   text-decoration: none;
+    //   color: inherit; /* inherit color from parent */
+    //   transition: transform 0.3s ease, color 0.3s ease; /* smooth transition */
+    // }
+  
+    // a:hover {
+    //   transform: scale(1.05); /* pop out effect */
+    //   color: #007bff; /* change link color on hover */
+    // }
+
+    &--about {
+      flex-direction: column;
+    }
+
+    &--experience {
+      align-items: flex-start;
+      margin-top: 9rem;
+      justify-content: space-between;
+    }
+  }
+
+  &__content-title {
+    margin: 2rem 0;
+  }
+
+  &__content-info {
+    line-height: 1.5;
+
+    &--experience {
+      text-align: right;
+      padding-right: 2rem;
+      
+    }
+
+    &__content-experience-item {
+      padding: 1rem;
+    }
+
+    .MuiSvgIcon-root {
+      font-size: 4.5rem; /* Adjust icon size */
+      color: #f4e9e9; /* Adjust icon color */
+    }
+  }
+
+  // Media Queries for responsiveness
+  @media (max-width: 1200px) {
     &__name {
       font-size: 4rem;
     }
 
     &__overview {
-      font-size: 1.2rem;
+      font-size: 1.5rem;
+    }
+
+    &__content-title {
+      font-size: 1.75rem;
+    }
+
+    &__content-info {
+      font-size: 0.9rem;
     }
   }
 
-  @media (max-width: 480px) {
+  @media (max-width: 992px) {
+    &__landing-page {
+      height: 50vh;
+    }
+
+    &__content {
+      padding: 2rem;
+    }
+
+    &__content-title {
+      font-size: 1.5rem;
+    }
+
+    &__content-info {
+      font-size: 0.85rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    &__landing-page {
+      height: 40vh;
+    }
+
     &__name {
       font-size: 3rem;
     }
 
     &__overview {
+      font-size: 1.25rem;
+    }
+
+    &__image {
+      width: 80%;
+    }
+
+    &__content {
+      padding: 1.5rem;
+    }
+
+    &__content-title {
+      font-size: 1.25rem;
+    }
+
+    &__content-info {
+      font-size: 0.75rem;
+    }
+  }
+
+  @media (max-width: 576px) {
+    &__landing-page {
+      height: 30vh;
+    }
+
+    &__name {
+      font-size: 2rem;
+    }
+
+    &__overview {
       font-size: 1rem;
+    }
+
+    &__image {
+      width: 100%;
+    }
+
+    &__content {
+      padding: 1rem;
+    }
+
+    &__content-title {
+      font-size: 1rem;
+    }
+
+    &__content-info {
+      font-size: 0.7rem;
     }
   }
 }
-
-img {
-  width: 200px;
-  height: 300px;
-  object-fit: contain;
-}
-
-
-// #background-image {
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   width: 40rem; /* Adjust width as needed */
-//   height: 60rem; /* Adjust height as needed */
-//   background: url('./assets/images/me.jpg') no-repeat top left;
-//   background-size: cover;
-//   filter: blur(0.3rem); /* Adjust blur as needed */
-//   clip-path: circle(100% at 50% 50%);
-//   opacity: 0.7; /* Adjust opacity as needed */
-//   mask-image: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
-//   -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)); /* For Safari */
-//   z-index: 0; /* Ensure it is behind other content */
-// }
-
-
-
-// #background-image {
-//     position: absolute;
-//     top: 1rem;
-//     left: 1.5rem;
-//     width: 40rem; /* Adjust width as needed */
-//     height: 60rem; /* Adjust height as needed */
-//     background: url('./assets/images/me.jpg') no-repeat top left;
-//     background-size: cover;
-//     filter: blur(0.3rem); /* Adjust blur as needed */
-//     clip-path: circle(100% at 50% 50%);
-//     opacity: 0.5; /* Adjust opacity as needed */
-//     mask-image: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
-//     -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)); /* For Safari */
-//     z-index: 0; /* Ensure it is behind other content */
-//   }
-  
-  // #background-image {
-  //   position: absolute;
-  //   top: 1rem;
-  //   left: 1.5rem;
-  //   width: 40rem; /* Adjust width as needed */
-  //   height: 60rem; /* Adjust height as needed */
-  //   background: url('./assets/images/me.jpg') no-repeat top left;
-  //   background-size: cover;
-  //   filter: blur(0.3rem); /* Adjust blur as needed */
-  //   clip-path: circle(100% at 50% 50%);
-  //   opacity: 0.5; /* Adjust opacity as needed */
-  //   z-index: 0; /* Ensure it is behind other content */
-  // }
-  
-  // .name {
-  //   text-align: center;
-  //   margin-top: 100px; /* Adjust as needed to avoid overlap */
-  // }
-  
-  // .overview {
-  //   text-align: center;
-  //   margin-top: 20px;
-  // }

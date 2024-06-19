@@ -2,20 +2,18 @@
 @use "./styles/typography";
 @use "./styles/variables" as *;
 
-html, body {
-  margin: 0;
+#root {
+  margin: 0; 
   padding: 0;
   height: 100%;
 }
 
 body {
   background: linear-gradient(160deg, $color-black 20%, $color-black 70%, $color-secondary 100%);
- // position: absolute;
   min-height: 100%;
-  width: auto;
-  //overflow: hidden; /* Ensure no scrollbars appear due to the fixed background image */
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  width: 100%;
+  padding: 3rem;
+  margin: 0;
 
   &::before {
     content: '';
@@ -26,14 +24,8 @@ body {
     height: 100%;
     background: url('./assets/images/valeria-reverdo-dwy2meBFqW8-unsplash.jpg') no-repeat center center;
     background-size: cover;
-    opacity: 0.8;
+    opacity: 0.9;
     z-index: -1;
-    //background-repeat: no-repeat;
     background-attachment: fixed;
-    
   }
-
-  //display: flex;
-  //justify-content: center;
-  //align-items: center;
 }

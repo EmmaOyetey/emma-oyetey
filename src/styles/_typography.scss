@@ -4,10 +4,15 @@
 @import url('https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@100..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Abel&family=M+PLUS+1+Code:wght@100..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Gudea:ital,wght@0,400;0,700;1,400&family=Major+Mono+Display&family=News+Cycle:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+// Font Variables
+$font-primary: 'Abel', 'NewsCycle', 'sans-serif', 'Segoe UI', 'Roboto';
+$font-secondary: 'Montserrat', 'Zen Dots', 'M PLUS 1 Code', sans-serif;
 
-:root {
-    line-height:1.5;
+* {
+    font-family: $font-primary;
+    line-height: 1.5;
     font-weight: 400;
     font-synthesis: none;
     text-rendering: optimizeLegibility;
@@ -15,32 +20,129 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-* {
-    font-family:'abel' , 'NewsCycle', 'sans-serif', 'segoe UI', 'Roboto';
+h1, h2, p {
+  margin: 0;
 }
 
 h1 {
-    font-family: 'abel';
-    color:$color-white;
-    font-size: 9rem;
-    line-height:1.1;
+    font-family: 'Abel', sans-serif;
+    color: $color-white;
+    font-size: 4rem;
+    line-height: 1.1;
+
+    @media (max-width: 1200px) {
+        font-size: 3.5rem;
+    }
+
+    @media (max-width: 992px) {
+        font-size: 3rem;
+    }
+
+    @media (max-width: 768px) {
+        font-size: 2.5rem;
+    }
+
+    @media (max-width: 576px) {
+        font-size: 2rem;
+    }
 }
 
 h2 {
-    font-family: 'abel';
+    font-family: 'Abel', sans-serif;
     color: $color-white;
-    font-size: 4rem;
+    font-size: 9rem;
+
+    @media (max-width: 1200px) {
+        font-size: 1.75rem;
+    }
+
+    @media (max-width: 992px) {
+        font-size: 1.5rem;
+    }
+
+    @media (max-width: 768px) {
+        font-size: 1.25rem;
+    }
+
+    @media (max-width: 576px) {
+        font-size: 1rem;
+    }
+}
+
+p {
+    font-family: $font-secondary;
+    color: $color-white;
+    font-size: 3.8rem;
+
+    @media (max-width: 1200px) {
+        font-size: 0.95rem;
+    }
+
+    @media (max-width: 992px) {
+        font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+        font-size: 0.85rem;
+    }
+
+    @media (max-width: 576px) {
+        font-size: 0.8rem;
+    }
 }
 
 a {
     font-weight: 500;
     color: $color-primary;
     text-decoration: inherit;
-  }
+
+    &:hover {
+        color: $color-primary-hover;
+    }
+}
+
+// @media (prefers-color-scheme: light) {
+//     * {
+//         color: $color-text-light;
+//         background-color: $color-background-light;
+//     }
+
+//     a:hover {
+//         color: lighten($color-primary, 20%);
+//     }
+
+//     button {
+//         background-color: $color-secondary;
+//     }
+// }
+//__________________________________________________________________
+
+// h1 {
+//     font-family: 'abel';
+//     color:$color-white;
+//     font-size: 9rem;
+//     line-height:1.1;
+// }
+
+// h2 {
+//     font-family: 'abel';
+//     color: $color-white;
+//     font-size: 4rem;
+// }
+
+// p {
+//     font-family: "Montserrat";
+// }
+
+// a {
+//     font-weight: 500;
+//     color: $color-primary;
+//     text-decoration: inherit;
+//   }
   
-  a:hover {
-    color: $color-primary-hover;
-  }
+//   a:hover {
+//     color: $color-primary-hover;
+//   }
 
 //   @media (prefers-color-scheme: light) {
 //     :root {
