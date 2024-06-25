@@ -43,7 +43,10 @@ const Home = () => {
       <OrganisationCard 
       name = "vInspired"
       location = "London"
-      overview='blah blah blah blah blah blah ablah blah blah' />
+      overview='blah blah blah blah blah blah ablah blah blah' 
+      date = "2012 - 2014"
+      jobRole = "Director of Education & Content"
+      />
       <div className="home__more-info">
         <div className="home__image-container">
           <img className="home__image" src={myImage} alt="Image of Emma" />

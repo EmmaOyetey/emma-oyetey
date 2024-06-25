@@ -6,20 +6,20 @@
   align-items: flex-start;
   justify-content: flex-start;
   width: 19rem;
-  height:10rem;
+  height: 10rem;
   padding: 1.2rem;
-    box-shadow: 0 0.325rem 0.3rem rgba(0, 0, 0, 0.1);
-  border: 0.1rem solid rgba(255, 255, 255, 0.05); 
+  box-shadow: 0 0.325rem 0.3rem rgba(0, 0, 0, 0.1);
+  border: 0.1rem solid rgba(255, 255, 255, 0.05);
   border-radius: 0.5rem;
-  background-color: rgba(255, 255, 255, 0.08); 
-  backdrop-filter: blur(15px); 
-  -webkit-backdrop-filter: blur(15px);   
+  background-color: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
   text-decoration: none !important;
 
   &__content {
     width: 100%;
     overflow: hidden;
-    }
+  }
 
   &__location {
     margin-bottom: 0.15rem;
@@ -27,7 +27,32 @@
     text-align: end;
   }
 
-  &__abrv-info{
+  &__abrv-info {
     text-align: end;
   }
+
+  &--back {
+
+    &__date,
+    &__job-role {
+      text-align: end; /* Ensure text is aligned to the end (right) */
+      width: 100%; /* Ensure it takes up the full width */
+    }
+
+    &__skills-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+
+      .skill-tag {
+        background-color: $color-primary;
+        color: $color-white;
+        padding: 0.2rem 0.4rem;
+        border-radius: 0.3rem;
+        font-size: 0.8rem;
+      }
+    }
+  }
 }
+
