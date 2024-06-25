@@ -43,4 +43,7 @@ Photo by <a href="https://unsplash.com/@aaronburden?utm_content=creditCopyText&u
 
   Photo by <a href="https://unsplash.com/@martinpechy?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Martin Péchy</a> on <a href="https://unsplash.com/photos/lights-turned-on-light-fixture-lBs7NrB2Cu8?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
   
-  
+  for glass effect
+  background-color: rgba(255, 255, 255, 0.08); /* more transparent white */
+    //  backdrop-filter: blur(8px); /* apply blur for frosted glass effect */
+    // margin-bottom: 2rem;
