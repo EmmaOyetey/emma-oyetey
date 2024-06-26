@@ -1,246 +1,112 @@
-// import {ExpereinceTypes } from "../Types/beerTypes";
+import {ExperienceType} from "../Types/experienceTypes";
 
-const Experience: ExperienceTypes[] = [
+
+const Experience: ExperienceType[] = [
   {
     id: 1,
-    
     organisation: {
     name: "myBnk",
+    location : "London",
     tagline: "Financial Education.",
     description:
-      "myBnk does akfj al jai aiw pw powir pqowipqori pqorqpori qp qpowri qpor  pqori qpori pqor qpo  blah blah blah blah blah blah.",
-    organisation_url: "https://images.punkapi.com/v2/keg.png",
+    "MyBnk is a UK charity that delivers expert-led financial education programmes for 5-25 year olds, working with schools, youth organisations and local authorities, out of Hubs in London, Scotland and the North West and South of England.",
+    organisation_url: "https://www.mybnk.org/info/",
     },
-    Role: [
+    roles: [
         {
         job_title:"Director Education & Content"  ,
         start_date:"06/2023" ,
-        Finish_date:"08/2024",
-        }
-        {
-        job_title:"Director Education & Content"  ,
-        start_date:"06/2023" ,
-        Finish_date:"08/2024",    
+        finish_date:"08/2024",
         }
     ],
-    Programmes: [
+    notable: [
         "The Money House",
-        "Money Twist"
-        
-    ]
-
-      mash_temp: [
-        {
-          temp: {
-            value: 64,
-            unit: "celsius",
-          },
-          duration: 75,
-        },
-      ],
-      fermentation: {
-        temp: {
-          value: 19,
-          unit: "celsius",
-        },
-      },
-      twist: null,
-    },
-    ingredients: {
-      malt: [
-        {
-          name: "Maris Otter Extra Pale",
-          amount: {
-            value: 3.3,
-            unit: "kilograms",
-          },
-        },
-        {
-          name: "Caramalt",
-          amount: {
-            value: 0.2,
-            unit: "kilograms",
-          },
-        },
-        {
-          name: "Munich",
-          amount: {
-            value: 0.4,
-            unit: "kilograms",
-          },
-        },
-      ],
-      hops: [
-        {
-          name: "Fuggles",
-          amount: {
-            value: 25,
-            unit: "grams",
-          },
-          add: "start",
-          attribute: "bitter",
-        },
-        {
-          name: "First Gold",
-          amount: {
-            value: 25,
-            unit: "grams",
-          },
-          add: "start",
-          attribute: "bitter",
-        },
-        {
-          name: "Fuggles",
-          amount: {
-            value: 37.5,
-            unit: "grams",
-          },
-          add: "middle",
-          attribute: "flavour",
-        },
-        {
-          name: "First Gold",
-          amount: {
-            value: 37.5,
-            unit: "grams",
-          },
-          add: "middle",
-          attribute: "flavour",
-        },
-        {
-          name: "Cascade",
-          amount: {
-            value: 37.5,
-            unit: "grams",
-          },
-          add: "end",
-          attribute: "flavour",
-        },
-      ],
-      yeast: "Wyeast 1056 - American Ale™",
-    },
-    food_pairing: [
-      "Spicy chicken tikka masala",
-      "Grilled chicken quesadilla",
-      "Caramel toffee cake",
+        "Money Twist",
     ],
-    brewers_tips:
-      "The earthy and floral aromas from the hops can be overpowering. Drop a little Cascade in at the end of the boil to lift the profile with a bit of citrus.",
-    contributed_by: "Sam Mason <samjbmason>",
   },
   {
     id: 2,
-    name: "Trashy Blonde",
-    tagline: "You Know You Shouldn't",
-    first_brewed: "04/2008",
+    organisation: {
+    name: "Reach",
+    location : "London",
+    tagline: "Digital service connecting orgs with skilled volunteers",
     description:
-      "A titillating, neurotic, peroxide punk of a Pale Ale. Combining attitude, style, substance, and a little bit of low self esteem for good measure; what would your mother say? The seductive lure of the sassy passion fruit hop proves too much to resist. All that is even before we get onto the fact that there are no additives, preservatives, pasteurization or strings attached. All wrapped up with the customary BrewDog bite and imaginative twist.",
-    image_url: "https://images.punkapi.com/v2/2.png",
-    abv: 4.1,
-    ibu: 41.5,
-    target_fg: 1010,
-    target_og: 1041.7,
-    ebc: 15,
-    srm: 15,
-    ph: 4.4,
-    attenuation_level: 76,
-    volume: {
-      value: 20,
-      unit: "litres",
+    "MReach is a uk chairty ar oweitu pe poeri pori pori pqori pqrio pqori pori pqori pqori pq ropqrp oqpori r hqWIR OQRI UOQIRU OQIRU OQIR WEKRJ HQWRU QRU OQLSDKFJ  PQOWEQPWORI QPWRO powe pweoriwpeori wpeori wpeor i.",
+    organisation_url: "https://www.myreacch.org/info/",
     },
-    boil_volume: {
-      value: 25,
-      unit: "litres",
-    },
-    method: {
-      mash_temp: [
+    roles: [
         {
-          temp: {
-            value: 69,
-            unit: "celsius",
-          },
-          duration: null,
-        },
-      ],
-      fermentation: {
-        temp: {
-          value: 18,
-          unit: "celsius",
-        },
-      },
-      twist: null,
-    },
-    ingredients: {
-      malt: [
-        {
-          name: "Maris Otter Extra Pale",
-          amount: {
-            value: 3.25,
-            unit: "kilograms",
-          },
-        },
-        {
-          name: "Caramalt",
-          amount: {
-            value: 0.2,
-            unit: "kilograms",
-          },
-        },
-        {
-          name: "Munich",
-          amount: {
-            value: 0.4,
-            unit: "kilograms",
-          },
-        },
-      ],
-      hops: [
-        {
-          name: "Amarillo",
-          amount: {
-            value: 13.8,
-            unit: "grams",
-          },
-          add: "start",
-          attribute: "bitter",
-        },
-        {
-          name: "Simcoe",
-          amount: {
-            value: 13.8,
-            unit: "grams",
-          },
-          add: "start",
-          attribute: "bitter",
-        },
-        {
-          name: "Amarillo",
-          amount: {
-            value: 26.3,
-            unit: "grams",
-          },
-          add: "end",
-          attribute: "flavour",
-        },
-        {
-          name: "Motueka",
-          amount: {
-            value: 18.8,
-            unit: "grams",
-          },
-          add: "end",
-          attribute: "flavour",
-        },
-      ],
-      yeast: "Wyeast 1056 - American Ale™",
-    },
-    food_pairing: [
-      "Fresh crab with lemon",
-      "Garlic butter dipping sauce",
-      "Goats cheese salad",
-      "Creamy lemon bar doused in powdered sugar",
+        job_title:"Head of Service & Operations"  ,
+        start_date:"06/2021" ,
+        finish_date:"06/2023",
+        }
     ],
-    brewers_tips:
-      "Be careful not to collect too much wort from the mash. Once the sugars are all washed out there are some very unpleasant grainy tasting compounds that can be extracted into the wort.",
-    contributed_by: "Sam Mason <samjbmason>",
+    notable: [
+        "Digital volunteers",
+        "GDPR",
+    ],
   },
+  {
+    id: 3,
+    organisation: {
+    name: "vinspired",
+    location : "London",
+    tagline: "Youth #led Volunteering",
+    description:
+    "vinspired was a akjf aqr qpor qpowri qpowri iaweir uqioru qpwru qpowr qpori qpowri qpowri qpowri qpowri qpowri qpowri qpwor iqpwori qpori I QPWRO powe pweoriwpeori wpeori wpeor i.",
+    organisation_url: "https://www.myreacch.org/info/",
+    },
+    roles: [
+        {
+        job_title:"Head of Schools & Youth Engagement"  ,
+        start_date:"06/2014" ,
+        finish_date:"06/2017",
+        }
+    ],
+    notable: [
+        "Youth-Led",
+        "NCS",
+    ],
+  },
+  {
+    id: 4,
+    organisation: {
+    name: "FreshStart",
+    location : "London",
+    tagline: "Education Specialist",
+    description:
+    "Freshstart work with young people.... qpowri iaweir uqioru qpwru qpowr qpori qpowri qpowri qpowri qpowri qpowri qpowri qpwor iqpwori qpori I QPWRO powe pweoriwpeori wpeori wpeor i.",
+    organisation_url: "https://www.freshstart.org/info/",
+    },
+    roles: [
+        {
+        job_title:"Head of Schools & Youth Engagement"  ,
+        start_date:"06/2014" ,
+        finish_date:"06/2017",
+        }
+    ],
+    notable: [
+        "SEMH",
+        "Bespoke",
+    ],
+  }
+]
+
+export default Experience;
+
+
+//     Working in partnership [
+// "Youth Financial Capability Group (YFCG)]
+//https://www.mybnk.org/our-work-financial-education/yfcg/
+//"An independent organisations that share a common vision for a society in which all children and young people can manage their money, make informed financial decisions, and ultimately achieve financial wellbeing"
+//Key_achievements [
+// Strategic review of the organisation's flagship program, and implemented key recommendations, covering aspects such as delivery models, job roles, accessibility and relevance of content, quality assurance, and the role of digital.
+// •	Collaborated with cross-functional stakeholders to lead strategic initiatives, including the development of a revised online learning offering
+// •	Worked alongside digital leads and expert agencies to enable operational efficiencies in program delivery, focusing on improving scheduling processes, communication, reporting, and compliance.
+// •	led the Monitoring and Evaluation team in developing and implementing a refreshed strategic approach, promoting innovation, fostering connections, and cultivating a positive work culture.
+// •	Successfully resolved complex issues affecting employee performance, well-being, and organisational effectiveness.
+// •	Developed and implemented both program-level and organisation-wide policies and procedures, including safeguarding policies (DSL).
+// •	Expanded the freelance training pool, enhancing induction and onboarding processes using e-learning, and prioritising a new annual training and development plan to bolster capacity and capability.
+// •	Monitored department and programme overheads, prepared budgets, and directed spending and resources to support fiscal efficiency.
+//]
+

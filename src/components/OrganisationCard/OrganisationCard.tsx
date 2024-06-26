@@ -1,24 +1,23 @@
 import React, { useState } from 'react';
 import "./OrganisationCard.scss";
 import NorthEastIcon from '@mui/icons-material/NorthEast';
+import {ExperienceType} from '../../Types/experienceTypes';
 
 type OrganisationCardProps = {
-  name: string;
-  location: string;
-  overview: string;
-  date?: string; // Optional prop for the date
-  jobRole?: string; // Optional prop for the job role
+  organisation: ExperienceType["organisation"]; // Use OrganisationType from ExperienceType
+  roles: ExperienceType["roles"]; // Use RoleType array from ExperienceType
+  //notable?: string[]; // Optional notable array from ExperienceType
 };
 
-const OrganisationCard = ({ name, location, overview, date, jobRole }: OrganisationCardProps) => {
+const OrganisationCard = ({ organisation, roles }: OrganisationCardProps) => {
   const [isFront, setIsFront] = useState(true);
 
-  const truncateDescription = () => {
-    const words = overview.split(' ');
+  const truncateDescription = (description: string) => {
+    const words = description.split(' ');
     if (words.length > 28) {
       return words.slice(0, 28).join(' ') + '...';
     }
-    return overview;
+    return description;
   };
 
   const toggleCard = () => {
@@ -30,26 +29,23 @@ const OrganisationCard = ({ name, location, overview, date, jobRole }: Organisat
       <div className="organisation-card__content">
         {isFront ? (
           <>
-            <h2 className="organisation-card__name">{name}</h2>
-            <h3 className="organisation-card__location">{location}</h3>
+            <h2 className="organisation-card__name">{organisation.name}</h2>
+            <h3 className="organisation-card__location">{organisation.location}</h3>
             <p className="organisation-card__abrv-info">
-              {truncateDescription()}
+              {truncateDescription(organisation.description)}
               <NorthEastIcon onClick={toggleCard} style={{ cursor: 'pointer' }} />
             </p>
           </>
         ) : (
           <>
-            <h2 className="organisation-card__name">{name}</h2>
-            {date && <h3 className="organisation-card--back__date">{date}</h3>}
-            {jobRole && (
-              <p className="organisation-card--back__job-role">
-                {jobRole}
-                <NorthEastIcon onClick={toggleCard} style={{ cursor: 'pointer' }} fontSize="small" />
-              </p>
+            <h2 className="organisation-card__name">{organisation.name}</h2>
+            {roles.length > 0 && (
+              <div>
+                <p className="organisation-card--back__dates">{`${roles[roles.length - 1].start_date} - ${roles[0].finish_date}`}</p>
+                <h3 className="organisation-card--back__job-title">{roles[0].job_title}</h3>
+              </div>
             )}
-            <div className="organisation-card--back__skills-tags">
-              {/* Render skill tags here if needed */}
-            </div>
+            <NorthEastIcon onClick={toggleCard} style={{ cursor: 'pointer' }} fontSize="small" />
           </>
         )}
       </div>

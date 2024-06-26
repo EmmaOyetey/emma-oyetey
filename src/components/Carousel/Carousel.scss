@@ -1,0 +1,39 @@
+.carousel__content {
+    display: flex;
+    overflow: hidden;
+  }
+  
+  @media (max-width: 768px) {
+    .carousel__content {
+      flex-direction: column; /* Change to vertical scroll on smaller screens */
+      overflow-y: auto; /* Enable vertical scrolling */
+      height: 100vh; /* Adjust as needed for your design */
+    }
+  
+    .carousel__item {
+      width: 100%; /* Full width for each item on small screens */
+      height: auto; /* Adjust as needed for your design */
+    }
+  }
+
+
+// .carousel__content {
+//     display: flex;
+//     overflow: hidden;
+//   }
+  
+//   @media (max-width: 768px) {
+//     .carousel__content {
+//       flex-direction: column; /* Change to vertical scroll on smaller screens */
+//     }
+  
+//     .carousel__item {
+//       width: 100%; /* Full width for each item on small screens */
+//     }
+//   }
+  
+//   @media (min-width: 769px) {
+//     .carousel__item {
+//       width: calc(100% / 2); /* Adjust width based on itemsToShow prop */
+//     }
+//   }

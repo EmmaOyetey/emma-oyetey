@@ -58,16 +58,13 @@ const Home = () => {
             </h2>
             <div className="home__content-info home__content-info--about">
               <p>
-                Blurb about varied career. passion for social prpose
-                organisations. working collaboritvely
+              A people focused and data driven senior leader; prioritising relationships, empathy, and understanding team dynamics and individuals alongside making decisions based on objective data and evidence, taking decisions that are both human-centered and empirically sound.
               </p>
+              <br />
               <p>
-                Experienced senior leader blah blah blah blah blah blah blah
-              </p>
-              <p>Collaborative diverse teams</p>
+              Creative, integrous and determined, I am quick to build trusted relationships and enjoy working as part of strong cross functional teams and have a passion for Human-centred service design , within organisations that have a strong culture of collaboration and learning</p>
               <p>
-                lsdjg woef pofi pweo powei powei powei pei poei powe powe wpoe
-                pweo.
+              
               </p>
             </div>
           </div>

@@ -1,0 +1,21 @@
+export type OrganisationType = {
+    name: string;
+    location: string;
+    tagline: string;
+    description: string;
+    organisation_url: string;
+  };
+
+  export type RoleType = {
+    job_title: string;
+    start_date: string; // Consider using Date type if you need date operations
+    finish_date: string; // Consider using Date type if you need date operations
+  };
+
+ export type ExperienceType = {
+    id: number;
+    organisation: OrganisationType;
+    roles: RoleType[];
+    programmes?: string[]; // Optional array of strings
+    notable?: string[]; // Optional array of strings
+  };
