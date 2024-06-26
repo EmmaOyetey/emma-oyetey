@@ -1,0 +1,79 @@
+
+// carousel {
+
+//   &__content {
+//   display: flex;
+//   overflow: hidden;
+//   justify-content: center ;
+//   &__arrow {
+//       background:none;
+//       border:none;
+//       cursor:pointer;
+//       position:absolute;
+
+//       &--left {
+//           left: 0;
+//       }
+
+//       &--right {
+//           right:0;
+//       }
+//   }
+// }
+//}
+
+@media (max-width: 768px) {
+  .carousel__content {
+    flex-direction: column; /* Change to vertical scroll on smaller screens */
+    overflow-y: auto; /* Enable vertical scrolling */
+    height: 100vh; /* Adjust as needed for your design */
+  }
+
+  .carousel__item {
+    width: 100%; /* Full width for each item on small screens */
+    height: auto; /* Adjust as needed for your design */
+  }
+}
+
+// .carousel {
+//     display: flex;
+//     //align-items: center;
+//     //justify-content: space-between;
+//     //position: relative;
+//     //padding: 0 2rem; 
+//     overflow: hidden;
+
+//     &__arrow {
+//         backgruond:none;
+//         border:none;
+//         cursor:pointer;
+//         position:absolute;
+
+//         &--left {
+//             left: 0;
+//         }
+
+//         &--right {
+//             right:0;
+//         }
+
+//         // &__content {
+//         //     flex: 1;
+//         //     display: flex;
+//         //     justify-content: center;
+//         //   }
+//     }
+//   }
+  
+//   @media (max-width: 768px) {
+//     .carousel__content {
+//       flex-direction: column; /* Change to vertical scroll on smaller screens */
+//       overflow-y: auto; /* Enable vertical scrolling */
+//       height: 100vh; /* Adjust as needed for your design */
+//     }
+  
+//     .carousel__item {
+//       width: 100%; /* Full width for each item on small screens */
+//       height: auto; /* Adjust as needed for your design */
+//     }
+//   }

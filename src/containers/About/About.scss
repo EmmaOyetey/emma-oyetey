@@ -1,0 +1,67 @@
+@use "../../styles/variables" as *;
+
+.about {
+ // color: $color-white;
+  padding: 2rem;
+  margin: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    // transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    //opacity: 50;
+    // transform: translateY(20px);
+    // padding-bottom: 20rem;
+
+    // &.visible {
+    //   opacity: 1;
+    //   transform: translateY(0);
+    // }
+  
+
+//   &__image-container {
+//     display: flex;
+//     justify-content: flex-start;
+//     align-items: flex-start;
+//     //position: relative; - add this back in to place around the actual image!
+
+//   }
+
+//   &__image-container::before {
+//     content: '';
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     right: 0;
+//     bottom: 0;
+//     border-radius: 10px; /* Adjust the border-radius as needed */
+//     box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.5); /* White blurry border */
+//     pointer-events: none; /* Ensure it doesn't interfere with interactions */
+// }
+
+  &__image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    filter: blur(0.2rem);
+    opacity: 0.8;
+    mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0) 80%);
+    -webkit-mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 0) 85%);
+    //padding-left: 3rem;
+  }
+
+  &__content {
+    padding-left: 3rem;
+  }
+ p {
+    font-size: 1.05rem;
+ }
+
+//   &__content {
+//     //padding-right: 3rem;
+//     margin-right: 9rem;
+//     width: 100%;
+//     display: flex;
+//     flex-direction: column;
+//     // justify-content: space-around;
+//   }
+}

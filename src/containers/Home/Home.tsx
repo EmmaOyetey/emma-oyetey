@@ -1,9 +1,11 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import './Home.scss';
 import myImage from "../../assets/images/me cut up4.png";
-import OrganisationCard from '../../components/OrganisationCard/OrganisationCard';
-import KeyboardDoubleArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrowDown';
+//import OrganisationCard from '../../components/OrganisationCard/OrganisationCard';
+//import KeyboardDoubleArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrowDown';
 import NorthEastIcon from '@mui/icons-material/NorthEast';
+import OrganisationsCarousel from '../OrganisationsCarousel/OrganisationsCarousel';
+import About from '../About/About';
 
 const Home = () => {
   useEffect(() => {
@@ -40,13 +42,8 @@ const Home = () => {
         <h1 className="home__name">Emma Oyetey</h1>
         <h2 className="home__overview">N11</h2>
       </div>
-      <OrganisationCard 
-      name = "vInspired"
-      location = "London"
-      overview='blah blah blah blah blah blah ablah blah blah' 
-      date = "2012 - 2014"
-      jobRole = "Director of Education & Content"
-      />
+      <OrganisationsCarousel/>
+      
       <div className="home__more-info">
         <div className="home__image-container">
           <img className="home__image" src={myImage} alt="Image of Emma" />
@@ -88,10 +85,8 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <OrganisationCard 
-      name = "myBnk"
-      location = "London"
-      overview='blah blah blah blah blah blah ablah blah blah' />
+      <OrganisationsCarousel />
+      <About />
     </div>
   );
 };

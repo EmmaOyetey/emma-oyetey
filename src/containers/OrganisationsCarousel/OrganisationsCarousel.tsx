@@ -1,15 +1,21 @@
 import Carousel from "../../components/Carousel/Carousel";
 import OrganisationCard from "../../components/OrganisationCard/OrganisationCard";
 import organisations from "../../Data/Experience";
-import { OrganisationType } from "../../Types/experienceTypes";
+import { ExperienceType } from "../../Types/experienceTypes";
+//import "../../components/Carousel/Carousel.scss";
+//import "../OrganisationsCarousel/OrganisationCarousel.scss"
 
-const renderOrganisation = (organisation: OrganisationType) => <OrganisationCard {...organisation} />;
+const renderOrganisation = (organisation: ExperienceType) => 
+    <OrganisationCard
+    organisation={organisation.organisation}
+    roles={organisation.roles}
+    />;
 
 const OrganisationsCarousel = () => (
   <Carousel 
     items={organisations} 
     renderItem={renderOrganisation} 
-    itemsToShow={2} 
+    itemsToShow={3} 
     itemsToChange={1} 
   />
 );

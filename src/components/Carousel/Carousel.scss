@@ -1,8 +1,41 @@
-.carousel__content {
+.carousel {
+    //padding: 1.2rem;
+    //background: green;
+    position:relative;
+    max-width: 80%;
+
+    &__content {
     display: flex;
     overflow: hidden;
-  }
+    justify-content: center ;
+    //align-items: center;
+    //background :yellow ;
+    //position:relative;
+    //padding-top:20px;
+    }
+
+    &__item {
+        padding:0.5rem;
+    }
+
+    &__arrow {
+        background: none;
+        border: none;
+        cursor: pointer;
+        position: absolute;
+        top: 30px; /* Adjust this value to set the distance from the top */
+        transform: translateY(-50%); /* Center vertically based on top position */
+    
+        &--left {
+          left: 0rem; /* Adjust left position */
+        }
+    
+        &--right {
+          right: 0px; /* Adjust right position */
+        }
+      }
   
+    }
   @media (max-width: 768px) {
     .carousel__content {
       flex-direction: column; /* Change to vertical scroll on smaller screens */

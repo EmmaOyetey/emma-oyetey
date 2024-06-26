@@ -4,21 +4,30 @@ import NorthEastIcon from '@mui/icons-material/NorthEast';
 import {ExperienceType} from '../../Types/experienceTypes';
 
 type OrganisationCardProps = {
-  organisation: ExperienceType["organisation"]; // Use OrganisationType from ExperienceType
-  roles: ExperienceType["roles"]; // Use RoleType array from ExperienceType
-  //notable?: string[]; // Optional notable array from ExperienceType
+  organisation: {
+    name: string;
+    location: string;
+    tagline: string;
+    description: string;
+    organisation_url: string;
+  };
+  roles?: {
+    job_title: string;
+    start_date: string;
+    finish_date: string;
+  }[];
 };
 
 const OrganisationCard = ({ organisation, roles }: OrganisationCardProps) => {
   const [isFront, setIsFront] = useState(true);
 
-  const truncateDescription = (description: string) => {
-    const words = description.split(' ');
-    if (words.length > 28) {
-      return words.slice(0, 28).join(' ') + '...';
-    }
-    return description;
-  };
+  // const truncateDescription = (description: string) => {
+  //   const words = description.split(' ');
+  //   if (words.length > 28) {
+  //     return words.slice(0, 28).join(' ') + '...';
+  //   }
+  //   return description;
+  // };
 
   const toggleCard = () => {
     setIsFront(!isFront);
@@ -31,15 +40,15 @@ const OrganisationCard = ({ organisation, roles }: OrganisationCardProps) => {
           <>
             <h2 className="organisation-card__name">{organisation.name}</h2>
             <h3 className="organisation-card__location">{organisation.location}</h3>
-            <p className="organisation-card__abrv-info">
-              {truncateDescription(organisation.description)}
+            <p className="organisation-card__tagline">
+              {organisation.tagline}
               <NorthEastIcon onClick={toggleCard} style={{ cursor: 'pointer' }} />
             </p>
           </>
         ) : (
           <>
             <h2 className="organisation-card__name">{organisation.name}</h2>
-            {roles.length > 0 && (
+            {roles && roles.length > 0 && (
               <div>
                 <p className="organisation-card--back__dates">{`${roles[roles.length - 1].start_date} - ${roles[0].finish_date}`}</p>
                 <h3 className="organisation-card--back__job-title">{roles[0].job_title}</h3>
