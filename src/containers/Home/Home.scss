@@ -1,41 +1,46 @@
 @use "../../styles/variables" as *;
 
-// .home {
-//  // color: $color-white;
-//   padding: 2rem;
-//   margin: 1rem;
+.home {
+ // color: $color-white;
+  padding: 2rem;
+  margin: 1rem;
   
-//   &__landing-page {
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-//     justify-content: center;
-//     height: 100vh;
-//     text-align: center;
-//   }
+  &__landing-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+  }
 
-//   &__name {
-//     font-size: 10rem;
-//     margin-bottom: 1rem;
-//   }
+  &__name {
+    font-size: 10rem;
+    margin-bottom: 1rem;
+  }
 
-//   &__overview {
-//     font-size: 2rem;
-//   }
+  &__overview {
+    font-size: 2rem;
+  }
 
-//   &__more-info {
-//     display: flex;
-//     //flex-direction: column;
-//     transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-//     opacity: 0;
-//     transform: translateY(20px);
-//     padding-bottom: 20rem;
+  &__more-info {
+    display: flex;
+    //flex-direction: column;
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    opacity: 0;
+    transform: translateY(20px);
+    //padding-bottom: 20rem;
 
-//     &.visible {
-//       opacity: 1;
-//       transform: translateY(0);
-//     }
-//   }
+    &.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  &__at-a-glance {
+    margin-top: 10rem;
+  }
+}
 
 //   &__image-container {
 //     display: flex;

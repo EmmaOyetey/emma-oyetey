@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import "./OrganisationCard.scss";
 import NorthEastIcon from '@mui/icons-material/NorthEast';
+import NorthWestIcon from '@mui/icons-material/NorthWest';
 import {ExperienceType} from '../../Types/experienceTypes';
 
 type OrganisationCardProps = {
@@ -42,19 +43,31 @@ const OrganisationCard = ({ organisation, roles }: OrganisationCardProps) => {
             <h3 className="organisation-card__location">{organisation.location}</h3>
             <p className="organisation-card__tagline">
               {organisation.tagline}
-              <NorthEastIcon onClick={toggleCard} style={{ cursor: 'pointer' }} />
             </p>
+            
+            <NorthEastIcon 
+            onClick={toggleCard} 
+            style={{ cursor: 'pointer' }}
+            className="organisation-card__icon"
+            />
+            
           </>
         ) : (
           <>
             <h2 className="organisation-card__name">{organisation.name}</h2>
             {roles && roles.length > 0 && (
               <div>
-                <p className="organisation-card--back__dates">{`${roles[roles.length - 1].start_date} - ${roles[0].finish_date}`}</p>
                 <h3 className="organisation-card--back__job-title">{roles[0].job_title}</h3>
+                <p className="organisation-card--back__dates">{`${roles[roles.length - 1].start_date} - ${roles[0].finish_date}`}</p>
+                
               </div>
             )}
-            <NorthEastIcon onClick={toggleCard} style={{ cursor: 'pointer' }} fontSize="small" />
+            <NorthWestIcon 
+            onClick={toggleCard} 
+            style={{ cursor: 'pointer' }} 
+            className="organisation-card__icon"
+            />
+            
           </>
         )}
       </div>

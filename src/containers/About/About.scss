@@ -3,10 +3,12 @@
 .about {
  // color: $color-white;
   padding: 2rem;
-  margin: 1rem;
+//   margin: 1rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    //background-color: black;
+    opacity: 0.7;
     // transition: opacity 0.5s ease-out, transform 0.5s ease-out;
     //opacity: 50;
     // transform: translateY(20px);
@@ -26,17 +28,18 @@
 
 //   }
 
-//   &__image-container::before {
-//     content: '';
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     right: 0;
-//     bottom: 0;
-//     border-radius: 10px; /* Adjust the border-radius as needed */
-//     box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.5); /* White blurry border */
-//     pointer-events: none; /* Ensure it doesn't interfere with interactions */
-// }
+  & ::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 10px; /* Adjust the border-radius as needed */
+    box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.5); /* White blurry border */
+    //box-shadow: 0 0 1px 1px rgba(255, 255, 255, 0.9);
+    pointer-events: none; /* Ensure it doesn't interfere with interactions */
+}
 
   &__image {
     width: 100%;
@@ -51,9 +54,11 @@
 
   &__content {
     padding-left: 3rem;
+
   }
  p {
-    font-size: 1.05rem;
+    font-size: 1.2rem;
+    //font-family:inherit;
  }
 
 //   &__content {

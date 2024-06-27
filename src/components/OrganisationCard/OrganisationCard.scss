@@ -1,11 +1,7 @@
 @use "../../styles/variables" as *;
 
 .organisation-card {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  width: 19rem;
+    width: 19rem;
   height: 10rem;
   padding: 1rem;
   box-shadow: 0 0.325rem 0.3rem rgba(0, 0, 0, 0.1);
@@ -15,10 +11,15 @@
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
   text-decoration: none !important;
+ // position: relative;
 
   &__content {
-    width: 100%;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    //justify-content: space-between;
+    height: 100%;
+    width: 100%;
   }
 
   &__location {
@@ -29,30 +30,71 @@
 
   &__tagline {
     text-align: end;
+    margin-top: auto; 
+    
+  }
+
+  &__icon {
+    position: absolute;
+    bottom: 7px; 
+    left: 7px; 
+    cursor: pointer;
+    font-size: 0.6rem;
+    color: $color-white;
   }
 
   &--back {
-
-    &__date,
-    &__job-role {
-      text-align: end; /* Ensure text is aligned to the end (right) */
-      width: 100%; /* Ensure it takes up the full width */
+    &__job-title {
+      color: $color-secondary;
     }
 
-    &__skills-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin-top: 0.5rem;
-
-      .skill-tag {
-        background-color: $color-primary;
-        color: $color-white;
-        padding: 0.2rem 0.4rem;
-        border-radius: 0.3rem;
-        font-size: 0.8rem;
-      }
-    }
+    
   }
 }
 
+
+
+    // &__skills-tags {
+    //   display: flex;
+    //   flex-wrap: wrap;
+    //   gap: 0.5rem;
+    //   margin-top: 0.5rem;
+
+    //   .skill-tag {
+    //     background-color: $color-primary;
+    //     color: $color-white;
+    //     padding: 0.2rem 0.4rem;
+    //     border-radius: 0.3rem;
+    //     font-size: 0.8rem;
+    //   }
+    // }
+
+    // background-color: rgba(255, 255, 255, 0.08);
+    // backdrop-filter: blur(15px);
+    // -webkit-backdrop-filter: blur(15px);
+    // text-decoration: none !important;
+
+
+    // &__name {
+    //   text-align: end;
+    // }
+
+    // &__job-title {
+    //   color: $color-white;
+      
+    // }
+
+       // background-color: rgba(255, 255, 255, 0.08);
+    // backdrop-filter: blur(15px);
+    // -webkit-backdrop-filter: blur(15px);
+    // text-decoration: none !important;
+
+
+    // &__name {
+    //   text-align: end;
+    // }
+
+    // &__job-title {
+    //   color: $color-white;
+      
+    // }
