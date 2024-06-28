@@ -1,0 +1,156 @@
+@use "../../styles/variables" as *;
+
+.people-card {
+  width: 14rem;
+  height: 19rem; // Adjust height as needed
+  position: relative;
+  perspective: 1000px; // Enables 3D perspective for card flipping
+  transition: transform 0.6s ease-in-out; // Adds flip animation
+  background-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0.325rem 0.3rem rgba(0, 0, 0, 0.1);
+  border: 0.1rem solid rgba(255, 255, 255, 0.05);
+  border-radius: 0.5rem;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+  }
+
+  &__front,
+  &__back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; // Ensures only the front or back is visible at a time
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.08);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    transition: transform 0.6s ease-in-out; // Smooth flip animation
+    color: $color-primary;
+  }
+
+  .people-card__front {
+    transform: rotateY(0deg); // Initial state (front)
+    z-index: 2;
+  }
+
+  .people-card__back {
+    transform: rotateY(180deg); // Flipped state (back)
+    z-index: 1;
+  }
+
+  &__image {
+    width: 100%;
+    max-height: 15rem;
+    object-fit: cover;
+    border-radius: 0.5rem;
+  }
+
+  &__name {
+    margin-top: 1rem;
+    font-weight: bold;
+  }
+
+  &__items {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 1rem;
+    color: $color-secondary;
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  &:hover {
+    .people-card__front {
+      transform: rotateY(-180deg); // Flips on hover to show back
+    }
+    .people-card__back {
+      transform: rotateY(0deg); // Flips on hover to show back
+    }
+  }
+}
+
+// .people-card {
+//   width: 3rem;
+//   height: 12rem; // Adjust height as needed
+//   position: relative;
+//   transition: transform 0.6s ease-in-out; // Adds flip animation
+
+//   &__content {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     justify-content: center;
+//     height: 100%;
+//     text-align: center;
+//     padding: 1rem;
+
+//     &__image {
+//       width: 100%;
+//       max-height: 15rem;
+//       object-fit: cover;
+//       border-radius: 0.5rem;
+//     }
+
+//     &__name {
+//       margin-top: 1rem;
+//       color: $color-primary;
+//       font-weight: bold;
+//     }
+
+//     &__icon {
+//       position: absolute;
+//       cursor: pointer;
+//       font-size: 1.5rem;
+//       color: $color-white;
+//       &.MuiSvgIcon-root {
+//         bottom: 10px;
+//         &.people-card--back {
+//           left: 10px;
+//         }
+//         &.people-card--front {
+//           right: 10px;
+//         }
+//       }
+//     }
+
+//     &--back {
+//       transform: rotateY(180deg); // Initial flipped state
+//       position: absolute;
+//       width: 100%;
+//       height: 100%;
+//       backface-visibility: hidden;
+
+//       .MuiCardContent-root {
+//         transform: rotateY(180deg); // Ensures content flips along with card
+//         display: flex;
+//         flex-direction: column;
+//         align-items: center;
+//         justify-content: center;
+//       }
+
+//       &__items {
+//         list-style-type: none;
+//         padding: 0;
+//         margin-top: 1rem;
+//         color: $color-secondary;
+
+//         li {
+//           margin-bottom: 0.5rem;
+//         }
+//       }
+//     }
+//   }
+// }

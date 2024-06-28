@@ -7,6 +7,10 @@ import NorthEastIcon from '@mui/icons-material/NorthEast';
 import OrganisationsCarousel from '../OrganisationsCarousel/OrganisationsCarousel';
 import About from '../About/About';
 import ExpByOrgInfo from '../Experience/ByOrganisation/ByOrganisation';
+import PeopleContainer from '../People/PeopleContainer';
+import { PeopleType } from '../../Types/peopleTypes'; // Import your PeopleType if necessary
+import people from '../../Data/People'; // Import your people data from people.ts
+
 
 const Home = () => {
   useEffect(() => {
@@ -49,7 +53,9 @@ const Home = () => {
       </div>
       <div className ="home__at-a-glance"></div>
       <OrganisationsCarousel />
-      
+      <div className = "home__people-container">
+      <PeopleContainer people={people} />
+      </div>
     </div>
   );
 };
