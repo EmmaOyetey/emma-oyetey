@@ -6,6 +6,7 @@ import myImage from "../../assets/images/me cut up4.png";
 import NorthEastIcon from '@mui/icons-material/NorthEast';
 import OrganisationsCarousel from '../OrganisationsCarousel/OrganisationsCarousel';
 import About from '../About/About';
+import ExpByOrgInfo from '../Experience/ByOrganisation/ByOrganisation';
 
 const Home = () => {
   useEffect(() => {
@@ -48,6 +49,7 @@ const Home = () => {
       </div>
       <div className ="home__at-a-glance"></div>
       <OrganisationsCarousel />
+      
     </div>
   );
 };

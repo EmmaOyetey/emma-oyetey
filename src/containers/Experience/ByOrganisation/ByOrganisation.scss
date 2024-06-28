@@ -1,4 +1,4 @@
-@use "../../styles/variables" as *;
+@use "../../../styles/variables" as *;
 
 .organisation-info {
   position: relative; 
@@ -28,7 +28,7 @@
     margin: 1rem;
 
     &:hover {
-      color: $color-navy-light;
+      color: navy; //adjust
     }
   }
 
@@ -98,7 +98,7 @@
         margin-right: 1rem;
         margin-bottom: 0.5rem;
         padding: 0.5rem 1rem;
-        background-color: $color-navy-light; /* Retain blue color */
+        background-color:navy; /* Retain blue color */
         border-radius: 0.3rem;
         font-size: 1rem;
         color: $color-white;
@@ -135,7 +135,7 @@
       transition: color 0.3s;
 
       &:hover {
-        color: $color-dark-burnt-orange;
+        color: orange; //change
       }
     }
   }
@@ -160,7 +160,7 @@
       font-size: 1.7rem;
 
       &:hover {
-        color: $color-navy-light;
+        color: blue;
       }
     }
   }

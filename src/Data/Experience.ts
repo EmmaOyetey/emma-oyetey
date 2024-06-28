@@ -1,7 +1,7 @@
 import {ExperienceType} from "../Types/experienceTypes";
 
 
-const Experience: ExperienceType[] = [
+const experience: ExperienceType[] = [
   {
     id: 1,
     organisation: {
@@ -181,7 +181,7 @@ const Experience: ExperienceType[] = [
   },
 ]
 
-export default Experience;
+export default experience;
 
 
 //     Working in partnership [

@@ -3,6 +3,7 @@ import "./OrganisationCard.scss";
 import NorthEastIcon from '@mui/icons-material/NorthEast';
 import NorthWestIcon from '@mui/icons-material/NorthWest';
 import {ExperienceType} from '../../Types/experienceTypes';
+import { Link } from 'react-router-dom'; 
 
 type OrganisationCardProps = {
   organisation: {
@@ -60,7 +61,7 @@ const OrganisationCard = ({ organisation, roles }: OrganisationCardProps) => {
               <div>
                 <h3 className="organisation-card--back__job-title">{roles[0].job_title}</h3>
                 <p className="organisation-card--back__dates">{`${roles[roles.length - 1].start_date} - ${roles[0].finish_date}`}</p>
-                
+                <Link to={`/organisation/${organisation.name}`} className="organisation-card__more-link">More</Link>
               </div>
             )}
             <NorthWestIcon 
