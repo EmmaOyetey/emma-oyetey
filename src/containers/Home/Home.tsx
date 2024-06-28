@@ -28,13 +28,7 @@ const Home = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const experienceItems = [
-    "People",
-    "Programmes & Projects",
-    "Policy & Process",
-    "Data",
-    "Digital",
-  ];
+ 
 
   return (
     <div className="home">

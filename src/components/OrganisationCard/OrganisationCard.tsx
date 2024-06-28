@@ -41,6 +41,7 @@ const OrganisationCard = ({ organisation, roles }: OrganisationCardProps) => {
           <>
             <h2 className="organisation-card__name">{organisation.name}</h2>
             <h3 className="organisation-card__location">{organisation.location}</h3>
+            
             <p className="organisation-card__tagline">
               {organisation.tagline}
             </p>

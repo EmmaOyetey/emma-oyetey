@@ -12,10 +12,17 @@ export type OrganisationType = {
     finish_date: string; // Consider using Date type if you need date operations
   };
 
+  export type AchievementType = {
+    item: string [];
+    link: string [];
+  };
+
  export type ExperienceType = {
     id: number;
     organisation: OrganisationType;
     roles: RoleType[];
     programmes?: string[]; // Optional array of strings
     notable?: string[]; // Optional array of strings
+    tags?: string[];
+    achievements?: AchievementType;
   };

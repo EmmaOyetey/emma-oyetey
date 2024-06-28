@@ -116,3 +116,32 @@ Vertical Scrolling on Mobile: On mobile devices, the carousel switches to vertic
 Usage
 The component automatically adjusts its layout and item count based on the window size, ensuring that your content is always displayed in the best possible way.
 
+cause people helped me value what i had to offer and gave me the passion and support to achieve it
+
+tab wit female outline in front of each or words with people hiddden underneath
+Katie Ryan -outdoors laughter and love
+Mrs Higgins - helped me realise my intellect 
+Gillian Greeenslade - feroucious and bold to have a voice
+lizzy - equality and integrity
+Tracey Herald Vicars - cretivity empathy and thoughtleadership
+Veronica - joy and self belief and kindness
+janet thorne - change maker and innovation nad introductin to passion for digital
+kate o'neil - pure talent and crafting importance of friendhip and compnionship
+Naima Oyetey - self belief, individualism and opportunity, pure joy and unbounding love
+Redcar, billie eilsih floetry beutiful words soken thrugh poetry and song
+
+student x - face in front of each / or image eg celotape / flipbook
+who wrapped thier face in celotape
+isolated in the block recieveing printouted out 
+who sat curled up on the floor on a locked toilet cubicle
+who pursued thier own interst and created flipbooks watching 
+eyes - faces of fear , sadness anxiety and faces of joy achievement
+child that sdworn at me thi something or somebody thrown soemthing in frustration
+asked why and what do i need to do differently
+its ok to be angry use it positively
+
+Mr Walters kindness mathematical ability
+monday was special creativity joy and laughter kindness
+tope carl wayne veronica joy of working in diverse teams and the challenge we still face for equality
+teams - archery dog walking bringing yurself to work
+

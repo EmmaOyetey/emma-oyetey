@@ -1,7 +1,7 @@
 @use "../../styles/variables" as *;
 
 .organisation-card {
-    width: 19rem;
+  width: 19rem;
   height: 10rem;
   padding: 1rem;
   box-shadow: 0 0.325rem 0.3rem rgba(0, 0, 0, 0.1);
@@ -11,7 +11,7 @@
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
   text-decoration: none !important;
- // position: relative;
+   position: relative;
 
   &__content {
     overflow: hidden;
