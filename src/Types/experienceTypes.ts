@@ -8,6 +8,7 @@ export type OrganisationType = {
 
   export type RoleType = {
     job_title: string;
+    areas_responsibility: string [];
     start_date: string; // Consider using Date type if you need date operations
     finish_date: string; // Consider using Date type if you need date operations
   };

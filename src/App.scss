@@ -29,3 +29,8 @@ body {
     background-attachment: fixed;
   }
 }
+
+// Specific style for the people page to ensure it overrides the global styles
+.white-dot-page {
+  background: none;
+}

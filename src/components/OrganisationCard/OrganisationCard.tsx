@@ -23,13 +23,31 @@ type OrganisationCardProps = {
 const OrganisationCard = ({ organisation, roles }: OrganisationCardProps) => {
   const [isFront, setIsFront] = useState(true);
 
-  // const truncateDescription = (description: string) => {
+   // const truncateDescription = (description: string) => {
   //   const words = description.split(' ');
   //   if (words.length > 28) {
   //     return words.slice(0, 28).join(' ') + '...';
   //   }
   //   return description;
   // };
+
+  const splitTagline = (tagline: string) => {
+    const maxLengthFirstLine = 35; // Define the maximum length for the first line
+
+    // Find the last space within the max length for the first line
+    let splitIndex = tagline.lastIndexOf(' ', maxLengthFirstLine);
+
+    // If there's no space found within the max length, use the full max length
+    if (splitIndex === -1) {
+      splitIndex = maxLengthFirstLine;
+    }
+
+    const firstLine = tagline.slice(0, splitIndex).trim();
+    const secondLine = tagline.slice(splitIndex).trim();
+    return { firstLine, secondLine };
+  };
+
+  const { firstLine, secondLine } = splitTagline(organisation.tagline);
 
   const toggleCard = () => {
     setIsFront(!isFront);
@@ -41,11 +59,14 @@ const OrganisationCard = ({ organisation, roles }: OrganisationCardProps) => {
         {isFront ? (
           <>
             <h2 className="organisation-card__name">{organisation.name}</h2>
-            <h3 className="organisation-card__location">{organisation.location}</h3>
-            
-            <p className="organisation-card__tagline">
-              {organisation.tagline}
+            <p className="organisation-card__location">
+             {organisation.location}
             </p>
+            
+            <div className="organisation-card__tagline-container">
+              <p className="organisation-card__tagline">{firstLine}</p>
+              <p className="organisation-card__tagline">{secondLine}</p>
+            </div>
             
             <NorthEastIcon 
             onClick={toggleCard} 
@@ -61,7 +82,9 @@ const OrganisationCard = ({ organisation, roles }: OrganisationCardProps) => {
               <div>
                 <h3 className="organisation-card--back__job-title">{roles[0].job_title}</h3>
                 <p className="organisation-card--back__dates">{`${roles[roles.length - 1].start_date} - ${roles[0].finish_date}`}</p>
-                <Link to={`/organisation/${organisation.name}`} className="organisation-card__more-link">More</Link>
+                <span style={{ display: 'block', textAlign: 'right' }}>
+                  <Link to={`/organisation/${organisation.name}`} className="organisation-card--back__more-link">More</Link>
+                </span>
               </div>
             )}
             <NorthWestIcon 

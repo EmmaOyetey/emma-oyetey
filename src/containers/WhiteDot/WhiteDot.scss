@@ -1,0 +1,94 @@
+// @use "../../styles/variables" as *;
+
+// .white-dot-page {
+//   position: relative;
+//   width: 100%;
+//   height: 100%;
+//   background-color: $color-black; // Initial background color
+// }
+
+// .white-dot {
+//   position: absolute;
+//   width: 10px;
+//   height: 10px;
+//   border-radius: 50%;
+//   background-color: #fff; // White dot color
+//   right: 5%;
+//   bottom: 5%;
+//   animation: expandDot 5s forwards; // Animation duration
+//   z-index: 1000; // Make sure it covers the background
+// }
+
+// @keyframes expandDot {
+//   0% {
+//     width: 10px;
+//     height: 10px;
+//     opacity: 1;
+//   }
+//   25% {
+//     width: 20vw; // Expand horizontally faster
+//     height: 10vh; // Expand vertically slower
+//   }
+//   50% {
+//     width: 40vw; // Continue expanding horizontally
+//     height: 20vh; // Continue expanding vertically
+//   }
+//   75% {
+//     width: 60vw; // Further expansion horizontally
+//     height: 40vh; // Further expansion vertically
+//   }
+//   100% {
+//     width: 200vw; // Fully expand to cover the viewport width
+//     height: 200vh; // Fully expand to cover the viewport height
+//     opacity: 1; // Keep it opaque
+//   }
+// }
+
+// .white-dot-content {
+//   position: relative;
+//   z-index: 10; // Ensure content appears above the dot
+//   color: #000; // Text color to contrast with white background
+//   padding: 2rem;
+// }
+
+@use "../../styles/variables" as *;
+
+.white-dot-page {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: $color-black; // Initial background color
+}
+
+.white-dot {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #fff; // White dot color
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  animation: expandDot 5s forwards; // Animation duration
+  z-index: 1000; // Make sure it covers the background
+}
+
+@keyframes expandDot {
+  0% {
+    width: 10px;
+    height: 10px;
+    opacity: 1;
+  }
+  100% {
+    width: 200vw; // Expand to fill the viewport width
+    height: 200vh; // Expand to fill the viewport height
+    opacity: 1; // Keep it opaque
+  }
+}
+
+.white-dot-content {
+  position: relative;
+  z-index: 10; // Ensure content appears above the dot
+  color: #000; // Text color to contrast with white background
+  padding: 2rem;
+}

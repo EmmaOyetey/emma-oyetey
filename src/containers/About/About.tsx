@@ -14,7 +14,7 @@ const About =() => {
                     </h1>
                     <div className="about__info">
                         <p>
-                            A people focused and data driven senior leader; prioritising relationships, empathy, and understanding individual and team dynamics and individuals alongside making decisions based on objective data and evidence. 
+                            A people focused and data driven senior leader; prioritising relationships, empathy, and understanding individual and team dynamics alongside making decisions based on objective data and evidence. 
                         </p>
                         <br />
                         <p>

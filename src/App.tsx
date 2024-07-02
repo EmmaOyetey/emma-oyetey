@@ -7,6 +7,7 @@ import { useParams } from 'react-router-dom';
 import ExpByOrgInfo from './containers/Experience/ByOrganisation/ByOrganisation';
 import experience from './Data/Experience';
 import { ExperienceType } from './Types/experienceTypes';
+import WhiteDot from './containers/WhiteDot/WhiteDot';
 
 const App = () => {
 
@@ -35,6 +36,7 @@ const getExperienceByOrganisationName = (organisationName: string): ExperienceTy
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/organisation/:organisationName" element={<ExpByOrgInfoLoader getExperienceByOrganisationName={getExperienceByOrganisationName} />} />
+          <Route path="/people" element={<WhiteDot />} />
         </Routes>
       </Router>
   )
