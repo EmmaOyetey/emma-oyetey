@@ -1,15 +1,13 @@
-import React, { useState } from 'react';
-import { ExperienceType } from "../../../Types/experienceTypes";
-import "./ByOrganisation.scss";
-import { Link } from "react-router-dom";
-import CloseIcon from '@mui/icons-material/Close';
+import { useState } from 'react';
+import { ExperienceType } from "../../Types/experienceTypes";
+import "./ExperienceCard.scss";
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
-type ExpByOrgProps = {
+type ExpCardProps = {
   experience: ExperienceType;
 };
 
-const ExpByOrgInfo = ({ experience }: ExpByOrgProps) => {
+const ExpCard = ({ experience }: ExpCardProps) => {
   const [showAbout, setShowAbout] = useState(false);
   const [showAchievements, setShowAchievements] = useState(false);
   const [showLinks, setShowLinks] = useState(false);
@@ -20,12 +18,7 @@ const ExpByOrgInfo = ({ experience }: ExpByOrgProps) => {
   const achievementLinks = experience.achievements?.link || [];
 
   return (
-    <article className="organisation-info">
-      <div className="organisation-info__banner">
-        <Link to="/" className="organisation-info__close-link">
-          <CloseIcon />
-        </Link>
-      </div>
+    <div className="organisation-info">
       <div className="organisation-info__content">
         <div className="organisation-info__header">
           <div className="organisation-info__details">
@@ -41,7 +34,6 @@ const ExpByOrgInfo = ({ experience }: ExpByOrgProps) => {
           </div>
           <img className="organisation-info__image" src={defaultImageUrl} alt={experience.organisation.name} />
         </div>
-
         <div className="organisation-info__section">
           <h3 className="organisation-info__toggle-header" onClick={() => setShowAbout(!showAbout)}>
             About <ExpandMoreIcon className={`organisation-info__toggle-icon ${showAbout ? 'expanded' : ''}`} />
@@ -50,7 +42,6 @@ const ExpByOrgInfo = ({ experience }: ExpByOrgProps) => {
             <p className="organisation-info__overview">{experience.organisation.description ?? `No description available`}</p>
           )}
         </div>
-
         <div className="organisation-info__section">
           <h3 className="organisation-info__toggle-header" onClick={() => setShowAchievements(!showAchievements)}>
             Achievements <ExpandMoreIcon className={`organisation-info__toggle-icon ${showAchievements ? 'expanded' : ''}`} />
@@ -79,8 +70,8 @@ const ExpByOrgInfo = ({ experience }: ExpByOrgProps) => {
           )}
         </div>
       </div>
-    </article>
+    </div>
   );
 };
 
-export default ExpByOrgInfo;
+export default ExpCard;
