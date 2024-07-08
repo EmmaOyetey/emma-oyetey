@@ -1,86 +1,233 @@
 @use "../../styles/variables" as *;
+$card-width: 200px;
+$card-height: 260px;
 
 .people-card {
-  width: 14rem;
-  height: 19rem; // Adjust height as needed
-  position: relative;
-  perspective: 1000px; // Enables 3D perspective for card flipping
-  transition: transform 0.6s ease-in-out; // Adds flip animation
-  background-color: rgba(255, 255, 255, 0.08);
-  box-shadow: 0 0.325rem 0.3rem rgba(0, 0, 0, 0.1);
-  border: 0.1rem solid rgba(255, 255, 255, 0.05);
-  border-radius: 0.5rem;
+  perspective: 1000px;
+  width: $card-width;
+  height: $card-height;
+  margin: 50px;
+  border: 2px solid rgba(0, 0, 0, 0.1); // Small border
+  background-color: rgba(255, 255, 255, 0); // Transparent background
 
+  
   &__content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    width: 100%;
     height: 100%;
-    text-align: center;
-    padding: 1rem;
-    position: relative;
+    //position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+    color: $color-white;
   }
+
+  &--flipped .people-card__content {
+    transform: rotateY(180deg);
+  } 
 
   &__front,
   &__back {
-    position: absolute;
     width: 100%;
     height: 100%;
-    backface-visibility: hidden; // Ensures only the front or back is visible at a time
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: rgba(255, 255, 255, 0.08);
+    flex-direction: column;
+    //background-color: rgba(255, 255, 255, 0); // Transparent background
+    //background-color: aqua;
+    // background-color: rgba(255, 255, 255, 0.3); // Semi-transparent background
+    // backdrop-filter: blur(10px); // Frosted glass effect
+    // border-radius: 10px; // Optional: rounded corners
+    // box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); // Optional: slight shadow for depth
+    box-shadow: 0 0.325rem 0.3rem rgba(0, 0, 0, 0.1);
+    border: 0.1rem solid rgba(255, 255, 255, 0.05);
     border-radius: 0.5rem;
-    padding: 1rem;
-    transition: transform 0.6s ease-in-out; // Smooth flip animation
-    color: $color-primary;
+    background-color: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
   }
 
-  .people-card__front {
-    transform: rotateY(0deg); // Initial state (front)
-    z-index: 2;
-  }
-
-  .people-card__back {
-    transform: rotateY(180deg); // Flipped state (back)
-    z-index: 1;
+  &__back {
+    transform: rotateY(180deg);
   }
 
   &__image {
-    width: 100%;
-    max-height: 15rem;
-    object-fit: cover;
-    border-radius: 0.5rem;
+    max-width: 80%;
+    max-height: 70%;
   }
 
-  &__name {
-    margin-top: 1rem;
-    font-weight: bold;
+  &__name,
+  &__items {
+    margin: 15px 0 0;
+    //font-size: 18px;
+    //color: $color-white; // Adjust the text color if needed
   }
 
   &__items {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
-    margin-top: 1rem;
-    color: $color-secondary;
-
-    li {
-      margin-bottom: 0.5rem;
-    }
   }
 
-  &:hover {
-    .people-card__front {
-      transform: rotateY(-180deg); // Flips on hover to show back
-    }
-    .people-card__back {
-      transform: rotateY(0deg); // Flips on hover to show back
-    }
+  &:hover .people-card__content {
+    transform: rotateY(180deg);
   }
 }
+
+
+
+
+
+//  @use "../../styles/variables" as *;
+
+//  $card-width: 300px;
+// $card-height: 400px;
+
+// .card-container {
+//   perspective: 1000px;
+//   width: $card-width;
+//   height: $card-height;
+//   margin: 50px;
+// }
+
+// .card {
+//   width: 100%;
+//   height: 100%;
+//   position: relative;
+//   transform-style: preserve-3d;
+//   transition: transform 0.6s;
+  
+//   &.flip {
+//     transform: rotateY(180deg);
+//   }
+// }
+
+// .card-face {
+//   width: 100%;
+//   height: 100%;
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   backface-visibility: hidden;
+//   background-color: rgba(255, 255, 255, 0); // Transparent background
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   flex-direction: column;
+// }
+
+// .card-front, .card-back {
+//   img {
+//     max-width: 90%;
+//     max-height: 70%;
+//   }
+
+//   p {
+//     margin: 10px 0 0;
+//     font-size: 18px;
+//     color: #000; // Adjust the text color if needed
+//   }
+// }
+
+// .card-back {
+//   transform: rotateY(180deg);
+// }
+
+// .card-container:hover .card {
+//   transform: rotateY(180deg);
+// }
+
+//  .people-card {
+//    width: 14rem;
+//    height: 19rem; // Adjust height as needed
+//    position: relative;
+//   perspective: 1000px; // Enables 3D perspective for card flipping
+//    transition: transform 0.6s ease-in-out; // Adds flip animation
+//     background-color: rgba(255, 255, 255, 0.05); // Increased transparency
+//   //  box-shadow: 0 0.325rem 0.3rem rgba(0, 0, 0, 0.1);
+//   // border: 0.1rem solid rgba(255, 255, 255, 0.05);
+//   // border-radius: 0.5rem;
+//   // z-index: 1;
+
+//   &__content {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     justify-content: center;
+//     height: 100%;
+//     text-align: center;
+//     padding: 1rem;
+//     position: relative;
+//     //background-color: transparent;
+//   }
+
+//   &__front,
+//   &__back {
+//     position: absolute;
+//     width: 100%;
+//     height: 100%;
+//     // backface-visibility: hidden; // Ensures only the front or back is visible at a time
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     justify-content: center;
+//     //background-color: rgba(255, 255, 255, 0.05); // Increased transparency
+//     background-color: red;
+//     //border-radius: 0.5rem;
+//     padding: 1rem;
+//     transition: transform 0.6s ease-in-out; // Smooth flip animation
+//     color: $color-primary;
+//   }
+
+//   &__front {
+//     transform: rotateY(0deg); // Initial state (front)
+//     z-index: 2;
+//   }
+
+//   &__back {
+//     transform: rotateY(180deg); // Flipped state (back)
+//     z-index: 1;
+//   }
+
+//    &__image {
+//      width: 100%;
+//      max-height: 15rem;
+//      object-fit: cover;
+//      border-radius: 0.5rem;
+//    }
+
+//   &__name {
+    
+//     margin-top: 1rem;
+//     font-weight: bold;
+//     color: $color-primary;
+//     background-color: black;
+//   }
+
+//   &__items {
+//     list-style-type: none;
+//     padding: 0;
+//     margin-top: 1rem;
+//     color: $color-secondary;
+//     background-color: black;
+
+//     li {
+//       margin-bottom: 0.5rem;
+//     }
+//   }
+
+//   &:hover {
+//     .people-card__front {
+//       transform: rotateY(-180deg); // Flips on hover to show back
+//     }
+//     .people-card__back {
+//       transform: rotateY(0deg); // Flips on hover to show back
+//     }
+//   }
+//  }
+///---------------------------------------------------------------------------
 
 // .people-card {
 //   width: 3rem;

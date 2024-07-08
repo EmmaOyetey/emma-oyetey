@@ -12,6 +12,8 @@ type ExpByOrgProps = {
 const ExpByOrgInfo = ({ experience }: ExpByOrgProps) => {
 const ExperienceTags = experience.tags || [];
 const defaultImageUrl = "https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg";
+const AchievementsItems = experience.achievements.item || [];
+const AchievementsLinks = experience.achievements.link || [];
 
   // useEffect(() => {
   //   window.scrollTo(0, 0);
@@ -40,7 +42,7 @@ const defaultImageUrl = "https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NV
           <div className="organisation-info__details">
             <h2 className="organisation-info__name">{experience.organisation.name}</h2>
             <div className="organisation-info__support-areas">
-              <h3 className="organisation-info__support-areas-header">Support Areas:</h3>
+              <h3 className="organisation-info__support-areas-header">Tags:</h3>
               <ul className="organisation-info__support-areas-list">
                 {ExperienceTags.map((area, index) => (
                   <li className="organisation-info__support-area" key={index}>{area}</li>
@@ -52,13 +54,24 @@ const defaultImageUrl = "https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NV
         </div>
               <h3 className="organisation-info__overview-header">About:</h3>
               <p className="organisation-info__overview">{experience.organisation.description ?? `No description available`}</p>
+              <h3 className ="organiastion-info__achievements"></h3>
+              <ul className="organisation-info__achievements-list">
+                {AchievementsItems.map((area, index) => (
+                  <li className="organisation-info__support-area" key={index}>{area}</li>
+                ))}
+              </ul>
               <h3 className="organisation-info__links-header">Find out More:</h3>
-              <p className="organisation-info__website-url">
+              <p className="organisation-info__website-link">
                 For more info visit: <a href={experience.organisation.organisation_url} target="_blank" rel="noopener noreferrer">{experience.organisation.organisation_url}</a>
               </p>
-              <p className="organisation-info__impact-url">
+              <p className="organisation-info__achievement-link">
                 Find out about their impact: <a href={experience.organisation.organisation_url} target="_blank" rel="noopener noreferrer">{experience.organisation.organisation_url}</a>
               </p>
+              <ul className="organisation-info__achievements-list">
+                {AchievementsLinks.map((area, index) => (
+                  <li className="organisation-info__support-area" key={index}>{area}</li>
+                ))}
+              </ul>
             </div>
           </article>
           </>

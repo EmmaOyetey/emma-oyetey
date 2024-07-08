@@ -10,7 +10,7 @@ const About =() => {
                 </div>
                 <div className="about__content">
                     <h1 className="about__title">
-                        <span style={{ color: "#76e1e1" }}> //</span> ABOUT
+                        <span style={{ color: "black" }}> //</span> ABOUT
                     </h1>
                     <div className="about__info">
                         <p>

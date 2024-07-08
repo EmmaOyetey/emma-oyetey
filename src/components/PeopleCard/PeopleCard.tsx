@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import "./PeopleCard.scss";
-import { Card, CardContent, Typography } from '@mui/material';
+import { Card, CardContent } from '@mui/material';
 import { PeopleType } from '../../Types/peopleTypes';
 
 type PeopleCardProps = {
@@ -15,22 +15,22 @@ const PeopleCard: React.FC<PeopleCardProps> = ({ person }) => {
   };
 
   return (
-    <Card className={`people-card ${isFlipped ? 'people-card--flipped' : ''}`} onClick={handleCardFlip}>
+    <div className={`people-card ${isFlipped ? 'people-card--flipped' : ''}`} onClick={handleCardFlip}>
       <CardContent className="people-card__content">
         <div className="people-card__front">
           <img src="https://rewirenewsgroup.com/wp-content/uploads/2022/03/rng-placeholder-person-silhouette-grey-800x533.jpg" alt="Person" className="people-card__image" />
-          <Typography variant="h5" className="people-card__name">{person.name}</Typography>
+          <h3 className="people-card__name">{person.name}</h3>
         </div>
         <div className="people-card__back">
-          <Typography variant="body1">I thank this person for:</Typography>
-          <ul className="people-card--flip__items">
+          <img src="https://rewirenewsgroup.com/wp-content/uploads/2022/03/rng-placeholder-person-silhouette-grey-800x533.jpg" alt="Person" className="people-card__image" />
+          <ul className="people-card__items">
             {person.item.map((item, index) => (
               <li key={index}>{item}</li>
             ))}
           </ul>
         </div>
       </CardContent>
-    </Card>
+    </div>
   );
 };
 

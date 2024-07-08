@@ -1,11 +1,21 @@
 @use "../../styles/variables" as *;
 
-
 .people-container {
   display: grid;
-  gap: 1rem; // Adjust gap between cards as needed
-  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr)); // Adjust card width as needed
+  gap: 0.8rem; // Adjust gap between cards as needed
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); // Adjust card width as needed
+  padding: 10px; // Optional: padding around the grid
+  margin-left: 0;
 }
+
+// @use "../../styles/variables" as *;
+
+
+// .people-container {
+//   display: grid;
+//   gap: 1rem; // Adjust gap between cards as needed
+//   grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr)); // Adjust card width as needed
+// }
 
 // .people-container {
 //   display: grid;
