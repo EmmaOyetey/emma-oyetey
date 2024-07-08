@@ -14,15 +14,15 @@ const About =() => {
                     </h1>
                     <div className="about__info">
                         <p>
-                            A people focused and data driven senior leader; prioritising relationships, empathy, and understanding individual and team dynamics alongside making decisions based on objective data and evidence. 
+                            A people focused and data driven senior leader; prioritising relationships, empathy, and understanding alongside taking decisions based on objective data and evidence. 
                         </p>
                         <br />
                         <p>
-                            Creative, integrous and determined, I am quick to build trusted relationships and enjoy working as part of strong cross functional teams. 
+                            Creative, integrous and determined, I am quick to build trusted relationships and enjoy working as part of strong and diverse cross functional teams. 
                         </p>
                         <br />
                         <p>
-                            I have a passion for Human-centred service design , within organisations that have a strong culture of collaboration and learning
+                            I have a passion for Human-centred service design , within organisations that have a strong culture of collaboration and learning.
                         </p>
                     </div>
                 </div>
