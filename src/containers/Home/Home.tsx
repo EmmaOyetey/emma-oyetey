@@ -10,6 +10,7 @@ import ExpByOrgInfo from '../Experience/ByOrganisation/ByOrganisation';
 import PeopleContainer from '../People/PeopleContainer';
 import { PeopleType } from '../../Types/peopleTypes'; // Import your PeopleType if necessary
 import people from '../../Data/People'; // Import your people data from people.ts
+import ExperienceCarousel from '../ExperienceCarousel/ExperienceCarousel';
 
 
 const Home = () => {
@@ -56,6 +57,8 @@ const Home = () => {
       <div className = "home__people-container">
       <PeopleContainer people={people} />
       </div>
+      <div className = "home__experience"></div>
+      <ExperienceCarousel />
     </div>
   );
 };

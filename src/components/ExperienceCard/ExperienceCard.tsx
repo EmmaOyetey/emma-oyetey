@@ -18,7 +18,7 @@ const ExpCard = ({ experience }: ExpCardProps) => {
   const achievementLinks = experience.achievements?.link || [];
 
   return (
-    <div className="organisation-info">
+    
       <div className="organisation-info__content">
         <div className="organisation-info__header">
           <div className="organisation-info__details">
@@ -70,7 +70,7 @@ const ExpCard = ({ experience }: ExpCardProps) => {
           )}
         </div>
       </div>
-    </div>
+   
   );
 };
 

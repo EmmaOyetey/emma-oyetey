@@ -1,0 +1,33 @@
+@use "../../../styles/variables" as *;
+
+.all-experience {
+  display: flex;
+  flex-direction: column;
+  align-items: center; // Center align all items horizontally
+  justify-content: center; // Center align all items vertically if needed
+  //padding: 10rem;
+ // width: 100%;
+  //min-height: 100vh;
+  padding: 2rem;
+
+//   .experience-card {
+//     width: 300px; // Set a fixed width for the cards
+//     height: 400px; // Set a fixed height for the cards
+//     margin-bottom: 2rem; // Space between cards
+//     background-color: $color-white;
+//     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+//     border-radius: 0.6rem;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     justify-content: center;
+//     text-align: center;
+//     color: $color-black;
+//     transition: transform 0.3s, box-shadow 0.3s;
+
+//     &:hover {
+//       transform: translateY(-5px);
+//       box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+//     }
+//   }
+}

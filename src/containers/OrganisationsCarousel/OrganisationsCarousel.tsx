@@ -16,7 +16,7 @@ const OrganisationsCarousel = () => (
     items={organisations} 
     renderItem={renderOrganisation} 
     itemsToShow={3} 
-    itemsToChange={1} 
+    itemsToChange={3} 
   />
 );
 
