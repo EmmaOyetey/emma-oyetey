@@ -24,7 +24,7 @@ const ExpCard = ({ experience }: ExpCardProps) => {
           <div className="organisation-info__details">
             <h2 className="organisation-info__name">{experience.organisation.name}</h2>
             <div className="organisation-info__tags">
-              <h3 className="organisation-info__tags-header">Tags:</h3>
+              
               <ul className="organisation-info__tags-list">
                 {experienceTags.map((tag, index) => (
                   <li className="organisation-info__tag" key={index}>{tag}</li>

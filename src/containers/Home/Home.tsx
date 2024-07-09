@@ -54,9 +54,9 @@ const Home = () => {
       </div>
       <div className ="home__at-a-glance"></div>
       <OrganisationsCarousel />
-      <div className = "home__people-container">
+      {/* <div className = "home__people-container">
       <PeopleContainer people={people} />
-      </div>
+      </div> */}
       <div className = "home__experience"></div>
       <ExperienceCarousel />
       <div className ="people__at-a-glance"></div>

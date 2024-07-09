@@ -9,6 +9,7 @@ import experience from './Data/Experience';
 import { ExperienceType } from './Types/experienceTypes';
 import WhiteDot from './containers/WhiteDot/WhiteDot';
 import AllExperience from './containers/Experience/AllExperience/AllExperience';
+import Digital from './containers/Digital/Digital';
 
 const App = () => {
 
@@ -39,6 +40,7 @@ const getExperienceByOrganisationName = (organisationName: string): ExperienceTy
           <Route path="/organisation/:organisationName" element={<ExpByOrgInfoLoader getExperienceByOrganisationName={getExperienceByOrganisationName} />} />
           <Route path="/people" element={<WhiteDot />} />
           <Route path="/experience" element={<AllExperience experience={experience} />} />
+          <Route path="/digital" element={<Digital />} />
         </Routes>
       </Router>
   )
