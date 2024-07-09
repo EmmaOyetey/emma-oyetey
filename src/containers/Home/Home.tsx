@@ -11,7 +11,7 @@ import PeopleContainer from '../People/PeopleContainer';
 import { PeopleType } from '../../Types/peopleTypes'; // Import your PeopleType if necessary
 import people from '../../Data/People'; // Import your people data from people.ts
 import ExperienceCarousel from '../ExperienceCarousel/ExperienceCarousel';
-
+import PeopleCarousel from '../PeopleCarousel/PeopleCarousel';
 
 const Home = () => {
   useEffect(() => {
@@ -59,6 +59,8 @@ const Home = () => {
       </div>
       <div className = "home__experience"></div>
       <ExperienceCarousel />
+      <div className ="people__at-a-glance"></div>
+      <PeopleCarousel />
     </div>
   );
 };
