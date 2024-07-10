@@ -248,7 +248,7 @@ const experience: ExperienceType[] = [
     ],
     tags: [
       "stakeholder management",
-      "Programme design and delivery",
+      "Programme design & delivery",
       "Grant management",
       "Policy",
       "Youth involvement"

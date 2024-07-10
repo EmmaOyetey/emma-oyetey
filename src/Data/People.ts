@@ -5,66 +5,56 @@ const people : PeopleType[] = [
         name: "Katie Ryan",
         organisation: [],
         item: [
-          "outdoors",
-          "laughter",
-          "love"
+          "Outdoors, laughter & love"
         ]
       },
       {
         name: "Mrs Higgins",
         organisation: [],
         item: [
-          "helped me realise my intellect"
+          "Mathematics"
         ],
       },
       {
         name: "Gillian Greenslade",
         organisation: [],
         item: [
-          "ferocious and bold to have a voice"
+          "Bold & Opinioned",
         ],
       },
       {
-        name: "Lizzy",
+        name: "Alison",
         organisation: [],
         item: [
-          "equality",
-          "integrity"
+          "Reliability & Quiet Deication"
         ],
       },
       {
         name: "Tracey Herald Vicars",
         organisation: [],
         item: [
-          "creativity",
-          "empathy",
-          "thought leadership"
+          "Creativity & thought leadership"
         ],
       },
       {
         name: "Veronica",
         organisation: [],
         item: [
-          "joy",
-          "self belief",
-          "kindness"
+          "Self belief & kindness"
         ],
       },
       {
         name: "Janet Thorne",
         organisation: [],
         item: [
-          "change maker",
-          "innovation",
-          "introduction to passion for digital"
+          "Innovation & digital"
         ],
       },
       {
         name: "Kate O'Neil",
         organisation: [],
         item: [
-          "pure talent",
-          "crafting importance of friendship and companionship"
+          "friendship & new hobbies"
         ],
       },
       {
@@ -78,13 +68,13 @@ const people : PeopleType[] = [
           "unbounding love"
         ],
       },
-      {
-        name: "Redcar, Billie Eilish, Floetry",
-        organisation: [],
-        item: [
-          "beautiful words spoken through poetry and song"
-        ],
-      }
+      // {
+      //   name: "Redcar, Billie Eilish, Floetry",
+      //   organisation: [],
+      //   item: [
+      //     "beautiful words spoken through poetry and song"
+      //   ],
+      // }
     ];
     
 export default people;
