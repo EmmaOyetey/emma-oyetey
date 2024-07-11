@@ -3,6 +3,7 @@ export type OrganisationType = {
     location: string;
     tagline: string;
     description: string;
+    overview: string;
     organisation_url: string;
   };
 
