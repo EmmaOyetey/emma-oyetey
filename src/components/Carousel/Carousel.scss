@@ -1,73 +1,43 @@
 .carousel {
-    //padding: 1.2rem;
-    //background: green;
-    position:relative;
-    max-width: 80%;
-    margin: 0 auto;
-   
+  position: relative;
+  max-width: 80%;
+  margin: 0 auto;
+  margin-left: 8rem;
 
-    &__content {
+  &__content {
     display: flex;
     overflow: hidden;
-    justify-content: center ;
-    //align-items: center;
-    //background :yellow ;
-    //position:relative;
-    //padding-top:20px;
-    }
-
-    &__item {
-        padding:0.5rem;
-    }
-
-    &__arrow {
-        background: none;
-        border: none;
-        cursor: pointer;
-        position: absolute;
-        top: 30px; /* Adjust this value to set the distance from the top */
-        transform: translateY(-50%); /* Center vertically based on top position */
-    
-        &--left {
-          left: 0rem; /* Adjust left position */
-        }
-    
-        &--right {
-          right: 0px; /* Adjust right position */
-        }
-      }
-  
-    }
-  @media (max-width: 768px) {
-    .carousel__content {
-      flex-direction: column; /* Change to vertical scroll on smaller screens */
-      overflow-y: auto; /* Enable vertical scrolling */
-      height: 100vh; /* Adjust as needed for your design */
-    }
-  
-    .carousel__item {
-      width: 100%; /* Full width for each item on small screens */
-      height: auto; /* Adjust as needed for your design */
-    }
+    justify-content: center;
   }
 
+  &__item {
+    padding: 0.5rem;
+  }
 
-// .carousel__content {
-//     display: flex;
-//     overflow: hidden;
+  &__arrow {
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 40px;
+    transform: translateY(-50%);
+
+    &--left {
+      left: -1.5rem;
+    }
+
+    &--right {
+      right: -1.5rem;
+    }
+  }
+}
+// @media (max-width: 768px) {
+//   .carousel__content {
+//     flex-direction: column;
 //   }
-  
-//   @media (max-width: 768px) {
-//     .carousel__content {
-//       flex-direction: column; /* Change to vertical scroll on smaller screens */
-//     }
-  
-//     .carousel__item {
-//       width: 100%; /* Full width for each item on small screens */
-//     }
-//   }
-  
-//   @media (min-width: 769px) {
+// }
+
+// @media (min-width: 769px) {
 //     .carousel__item {
 //       width: calc(100% / 2); /* Adjust width based on itemsToShow prop */
 //     }

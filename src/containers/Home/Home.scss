@@ -1,7 +1,6 @@
 @use "../../styles/variables" as *;
 
 .home {
- // color: $color-white;
   padding: 2rem;
   margin: 1rem;
   
@@ -12,24 +11,24 @@
     justify-content: center;
     height: 100vh;
     text-align: center;
-  }
 
-  &__name {
-    font-size: 10rem;
-    margin-bottom: 1rem;
-  }
+    &__name {
+      font-size: 10rem;
+      margin-bottom: 1rem;
+    }
 
-  &__overview {
-    font-size: 2rem;
+    &__overview {
+      font-size: 1.3rem;
+      color: $color-white;
+    }
   }
 
   &__more-info {
+    height: 100vh;
     display: flex;
-    //flex-direction: column;
     transition: opacity 0.5s ease-out, transform 0.5s ease-out;
     opacity: 0;
     transform: translateY(20px);
-    //padding-bottom: 20rem;
 
     &.visible {
       opacity: 1;
@@ -37,211 +36,56 @@
     }
   }
 
-  &__at-a-glance {
-    margin-top: 10rem;
+  &__section {
+    display: flex;
+    margin-bottom: 7rem;
+    justify-content: center;
+    align-items: center;
+
+    &--where {
+      flex-direction: column;
+    }
+
+    &--what {
+      justify-content: space-around;
+      //align-items: flex-start;
+    }
+
+    &--who {
+      flex-direction: row-reverse;
+      justify-content: space-around;
+
+    }
+
+    
+      &__header {
+
+       
+          &--where{
+          text-align: center;
+          font-size: 2.5rem;
+          margin-bottom: 1rem;
+        }
+        &--what {
+          text-align: center;
+          font-size: 2.3rem;
+         // display: block;
+          
+          
+          margin-top: 0.5rem;
+          //margin-right: 7rem;
+        }
+
+        &--who{
+          font-size: 2.3rem;
+          margin-left: 3rem;
+        }
+
+    }
+
+   
+
+   
   }
+}                                           
 
-  &__people-container {
-    margin-top: 10rem;
-  }
-}
-
-//   &__image-container {
-//     display: flex;
-//     justify-content: flex-start;
-//     align-items: flex-start;
-//     //position: relative; - add this back in to place around the actual image!
-//     // 
-//   }
-
-//   &__image-container::before {
-//     content: '';
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     right: 0;
-//     bottom: 0;
-//     border-radius: 10px; /* Adjust the border-radius as needed */
-//     box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.5); /* White blurry border */
-//     pointer-events: none; /* Ensure it doesn't interfere with interactions */
-// }
-
-//   &__image {
-//     width: 75%;
-//     height: auto;
-//     object-fit: contain;
-//     filter: blur(0.2rem);
-//     opacity: 0.8;
-//     mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0) 80%);
-//     -webkit-mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 0) 85%);
-//     //padding-left: 3rem;
-//   }
-
-
-//   &__content {
-//     //padding-right: 3rem;
-//     margin-right: 9rem;
-//     width: 100%;
-//     // display: flex;
-//     // flex-direction: row;
-//     // justify-content: space-around;
-//   }
-
-//   &__content-section {
-//     &--about,
-//     &--experience {
-//       display: flex;
-//       //flex-direction: column;
-//       // background-color: rgba(255, 255, 255, 0.09); /* more transparent white */
-//       // backdrop-filter: blur(10px); /* apply blur for frosted glass effect */
-//       border-radius: 20px;
-//       padding: 5rem;
-//       margin-bottom: 2rem;
-//       //border: 1px dotted #76e1e1; /* optional: add a subtle border */
-//       // border: 1px solid rgba(255, 255, 255, 0.18);
-//       // box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), /* shadow for 3D effect */
-//       // 0 1px 3px rgba(0, 0, 0, 0.08);
-//     }
-
-//     // a {
-//     //   text-decoration: none;
-//     //   color: inherit; /* inherit color from parent */
-//     //   transition: transform 0.3s ease, color 0.3s ease; /* smooth transition */
-//     // }
-  
-//     // a:hover {
-//     //   transform: scale(1.05); /* pop out effect */
-//     //   color: #007bff; /* change link color on hover */
-//     // }
-
-//     &--about {
-//       flex-direction: column;
-//     }
-
-//     &--experience {
-//       align-items: flex-start;
-//       margin-top: 9rem;
-//       justify-content: space-between;
-//     }
-//   }
-
-//   //&__content-title {
-//    // margin: 2rem 0;
-//   //}
-
-//   &__content-info {
-//     line-height: 1.5;
-
-//     &--experience {
-//       text-align: right;
-//       padding-right: 2rem;
-      
-//     }
-
-//     &__content-experience-item {
-//       padding: 1rem;
-//     }
-
-//     .MuiSvgIcon-root {
-//       font-size: 2rem; /* Adjust icon size */
-//       color: #f4e9e9; /* Adjust icon color */
-//     }
-//   }
-
-//   // Media Queries for responsiveness
-//   @media (max-width: 1200px) {
-//     &__name {
-//       font-size: 4rem;
-//     }
-
-//     &__overview {
-//       font-size: 1.5rem;
-//     }
-
-//     &__content-title {
-//       font-size: 1.75rem;
-//     }
-
-//     &__content-info {
-//       font-size: 0.9rem;
-//     }
-//   }
-
-//   @media (max-width: 992px) {
-//     &__landing-page {
-//       height: 50vh;
-//     }
-
-//     &__content {
-//       padding: 2rem;
-//     }
-
-//     &__content-title {
-//       font-size: 1.5rem;
-//     }
-
-//     &__content-info {
-//       font-size: 0.85rem;
-//     }
-//   }
-
-//   @media (max-width: 768px) {
-//     &__landing-page {
-//       height: 40vh;
-//     }
-
-//     &__name {
-//       font-size: 3rem;
-//     }
-
-//     &__overview {
-//       font-size: 1.25rem;
-//     }
-
-//     &__image {
-//       width: 80%;
-//     }
-
-//     &__content {
-//       padding: 1.5rem;
-//     }
-
-//     &__content-title {
-//       font-size: 1.25rem;
-//     }
-
-//     &__content-info {
-//       font-size: 0.75rem;
-//     }
-//   }
-
-//   @media (max-width: 576px) {
-//     &__landing-page {
-//       height: 30vh;
-//     }
-
-//     &__name {
-//       font-size: 2rem;
-//     }
-
-//     &__overview {
-//       font-size: 1rem;
-//     }
-
-//     &__image {
-//       width: 100%;
-//     }
-
-//     &__content {
-//       padding: 1rem;
-//     }
-
-//     &__content-title {
-//       font-size: 1rem;
-//     }
-
-//     &__content-info {
-//       font-size: 0.7rem;
-//     }
-//   }
-// }

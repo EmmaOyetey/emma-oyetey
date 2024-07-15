@@ -1,17 +1,10 @@
-import { useEffect } from 'react';
-import './Home.scss';
-import myImage from "../../assets/images/me cut up4.png";
-//import OrganisationCard from '../../components/OrganisationCard/OrganisationCard';
-//import KeyboardDoubleArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrowDown';
-import NorthEastIcon from '@mui/icons-material/NorthEast';
-import OrganisationsCarousel from '../OrganisationsCarousel/OrganisationsCarousel';
-import About from '../About/About';
-import ExpByOrgInfo from '../Experience/ByOrganisation/ByOrganisation';
-import PeopleContainer from '../People/PeopleContainer';
-import { PeopleType } from '../../Types/peopleTypes'; // Import your PeopleType if necessary
-import people from '../../Data/People'; // Import your people data from people.ts
-import ExperienceCarousel from '../ExperienceCarousel/ExperienceCarousel';
-import PeopleCarousel from '../PeopleCarousel/PeopleCarousel';
+import { useEffect } from "react";
+import "./Home.scss";
+import About from "../About/About";
+import OrganisationsCarousel from "../OrganisationsCarousel/OrganisationsCarousel";
+import ExperienceCarousel from "../ExperienceCarousel/ExperienceCarousel";
+import PeopleCarousel from "../PeopleCarousel/PeopleCarousel";
+import Where from "../Where/Where";
 
 const Home = () => {
   useEffect(() => {
@@ -34,35 +27,46 @@ const Home = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
- 
-
   return (
     <div className="home">
       <div className="home__landing-page">
-        <h1 className="home__name">Emma Oyetey</h1>
-        <h2 className="home__overview">N11</h2>
+        <h1 className="home__landing-page__name">Emma Oyetey</h1>
+        <h3 className="home__landing-page__overview">
+          Education, Volunteering, Software Engineering
+        </h3>
       </div>
-      
+
       <div className="home__more-info">
-        
         <div className="home__content">
           <div className="home__content-section home__content-section--about ">
-            <About /> 
+            <About />
           </div>
         </div>
-
       </div>
-      <div className ="home__at-a-glance"></div>
-      <OrganisationsCarousel />
-      {/* <div className = "home__people-container">
-      <PeopleContainer people={people} />
-      </div> */}
-      <div className = "home__experience"></div>
-      <ExperienceCarousel />
-      <div className ="people__at-a-glance"></div>
-      <PeopleCarousel />
+
+      <div className="home__section home__section--where">
+        <h2 className="home__section__header home__section__header--where">--- WHERE ---</h2>
+        <div><Where /></div>
+      </div>
+      
+      
+      <div className="home__section home__section--what">
+        <p className="home__section__header home__section__header--what">--- WHAT ---</p>
+        <div className="home__section__content home__section__content--what"><ExperienceCarousel /></div>
+      </div>
+      
+      <div className="home__section home__section--who">
+        <p className="home__section__header home__section__header--who">--- WHO ---</p>
+        <div><PeopleCarousel /></div>
+      </div>
+      
     </div>
   );
 };
-  
-  export default Home;
+
+export default Home;
+
+
+{/* <div className = "home__people-container">
+      <PeopleContainer people={people} />
+      </div> */}

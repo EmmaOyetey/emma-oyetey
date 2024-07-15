@@ -3,7 +3,7 @@ import Carousel from "../../components/Carousel/Carousel";
 import PeopleCard from "../../components/PeopleCard/PeopleCard";
 import people from "../../Data/People";
 import { PeopleType } from "../../Types/peopleTypes";
-//import "../../components/Carousel/Carousel.scss";
+import "./PeopleCarousel.scss";
 //import "../OrganisationsCarousel/OrganisationCarousel.scss"
 
 const renderPeople = (people: PeopleType) => 
@@ -16,6 +16,7 @@ const PeopleCarousel = () => (
     renderItem={renderPeople} 
     itemsToShow={4} 
     itemsToChange={4} 
+    className ="carousel__people"
   />
 );
 

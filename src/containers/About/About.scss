@@ -1,44 +1,20 @@
 @use "../../styles/variables" as *;
 
 .about {
- // color: $color-white;
   padding: 2rem;
-//   margin: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    //background-color: black;
-    opacity: 0.85;
-    box-shadow: 0 0.325rem 0.3rem rgba(0, 0, 0, 0.1);
-    border: 0.1rem solid rgba(255, 255, 255, 0.05);
-    border-radius: 0.7rem;
-    background-color: rgba(255, 255, 255, 0.08);
-    //background-color: rgba(20, 20, 20, 0.2);
-    //background-color: rgba(80, 255, 255, 0.08); blue tint
-    //background-color: rgba(50, 50, 50, 0.08);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    text-decoration: none !important;
-     position: relative;
-
-    // transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-    //opacity: 50;
-    // transform: translateY(20px);
-    // padding-bottom: 20rem;
-
-    // &.visible {
-    //   opacity: 1;
-    //   transform: translateY(0);
-    // }
-  
-
-//   &__image-container {
-//     display: flex;
-//     justify-content: flex-start;
-//     align-items: flex-start;
-//     //position: relative; - add this back in to place around the actual image!
-
-//   }
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  opacity: 0.85;
+  box-shadow: 0 0.325rem 0.3rem rgba(0, 0, 0, 0.1);
+  border: 0.1rem solid rgba(255, 255, 255, 0.05);
+  border-radius: 0.7rem;
+  background-color: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  text-decoration: none !important;
+  position: relative;
+  border-radius: 2rem;
 
   & ::before {
     content: '';
@@ -47,14 +23,8 @@
     left: 0;
     right: 0;
     bottom: 0;
+  } 
     
-    //---------------the below gives a nice white border 
-    //border-radius: 10px; /* Adjust the border-radius as needed */
-    //box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.5); /* White blurry border */
-    //box-shadow: 0 0 1px 1px rgba(255, 255, 255, 0.9);
-    //pointer-events: none; /* Ensure it doesn't interfere with interactions */
-}
-
   &__image {
     width: 100%;
     height: auto;
@@ -63,24 +33,25 @@
     opacity: 0.8;
     mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0) 80%);
     -webkit-mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 0) 85%);
-    //padding-left: 3rem;
+    padding-left: 3rem;
   }
 
   &__content {
     padding-left: 3rem;
-
   }
- p {
-    font-size: 1.2rem;
-    //font-family:inherit;
- }
 
-//   &__content {
-//     //padding-right: 3rem;
-//     margin-right: 9rem;
-//     width: 100%;
-//     display: flex;
-//     flex-direction: column;
-//     // justify-content: space-around;
-//   }
+  p {
+    font-size: 1.2rem;
+  }
+
 }
+
+//---------------the below gives a nice white border 
+    //border-radius: 10px; /* Adjust the border-radius as needed */
+    //box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.5); /* White blurry border */
+    //box-shadow: 0 0 1px 1px rgba(255, 255, 255, 0.9);
+    //pointer-events: none; /* Ensure it doesn't interfere with interactions */
+    //---------------the below give alternative background colours
+    //background-color: rgba(20, 20, 20, 0.2);
+    //background-color: rgba(80, 255, 255, 0.08); //blue tint
+    //background-color: rgba(50, 50, 50, 0.08);

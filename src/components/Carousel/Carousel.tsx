@@ -1,16 +1,17 @@
 import { useState, useEffect } from "react";
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import "./Carousel.scss";
+//import "./Carousel.scss";
 
 type CarouselProps<T> = {
   items: T[];
   renderItem: (item: T) => JSX.Element;
   itemsToShow: number;
   itemsToChange: number;
+  className?: string;
 };
 
-const Carousel = <T,>({ items, renderItem, itemsToShow, itemsToChange }: CarouselProps<T>) => {
+const Carousel = <T,>({ items, renderItem, itemsToShow, itemsToChange, className }: CarouselProps<T>) => {
   const [counter, setCounter] = useState<number>(0);
   const [displayCount, setDisplayCount] = useState<number>(itemsToShow);
 
@@ -24,7 +25,7 @@ const Carousel = <T,>({ items, renderItem, itemsToShow, itemsToChange }: Carouse
     };
 
     window.addEventListener("resize", handleResize);
-    handleResize(); // Set initial value
+    handleResize(); 
 
     return () => window.removeEventListener("resize", handleResize);
   }, [itemsToShow]);
@@ -48,23 +49,23 @@ const Carousel = <T,>({ items, renderItem, itemsToShow, itemsToChange }: Carouse
   }
 
   return (
-    <div className="carousel">
+    <div className={`carousel ${className}`}>
       <button
-        className="carousel__arrow carousel__arrow--left"
+        className={`carousel__arrow carousel__arrow--left ${className}__arrow ${className}__arrow--left`}
         aria-label="Navigate left"
         onClick={handleDecrement}
       >
         <ArrowBackIosIcon style={{ color: "white" }} />
       </button>
-      <div className="carousel__content">
+      <div className={`carousel__content ${className}__content`}>
         {displayedItems.map((item, index) => (
-          <div key={index} className="carousel__item">
+          <div key={index} className={`carousel__item ${className}__item`}>
             {renderItem(item)}
           </div>
         ))}
       </div>
       <button
-        className="carousel__arrow carousel__arrow--right"
+        className={`carousel__arrow carousel__arrow--right ${className}__arrow ${className}__arrow--right`}
         aria-label="Navigate right"
         onClick={handleIncrement}
       >
