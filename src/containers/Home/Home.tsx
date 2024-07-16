@@ -9,16 +9,16 @@ import Where from "../Where/Where";
 const Home = () => {
   useEffect(() => {
     const handleScroll = () => {
-      const moreInfoSection = document.querySelector(".home__more-info");
-      if (moreInfoSection) {
-        const moreInfoSectionTop = moreInfoSection.getBoundingClientRect().top;
-        const moreInfoSectionVisible =
-          moreInfoSectionTop <= window.innerHeight / 2;
+      const aboutMe = document.querySelector(".home__about-me");
+      if (aboutMe) {
+        const aboutMeTop = aboutMe.getBoundingClientRect().top;
+        const aboutMeVisible =
+        aboutMeTop <= window.innerHeight / 2;
 
-        if (moreInfoSectionVisible) {
-          moreInfoSection.classList.add("visible");
+        if (aboutMeVisible) {
+          aboutMe.classList.add("visible");
         } else {
-          moreInfoSection.classList.remove("visible");
+          aboutMe.classList.remove("visible");
         }
       }
     };
@@ -36,8 +36,8 @@ const Home = () => {
         </h3>
       </div>
 
-      <div className="home__more-info">
-        <div className="home__content">
+      <div className="home__about-me">
+        <div className="home__about-me--content">
           <div className="home__content-section home__content-section--about ">
             <About />
           </div>
@@ -46,7 +46,7 @@ const Home = () => {
 
       <div className="home__section home__section--where">
         <h2 className="home__section__header home__section__header--where">--- WHERE ---</h2>
-        <div><Where /></div>
+        <div className="home__section__content home__section__content--where" ><Where /></div>
       </div>
       
       
@@ -57,7 +57,7 @@ const Home = () => {
       
       <div className="home__section home__section--who">
         <p className="home__section__header home__section__header--who">--- WHO ---</p>
-        <div><PeopleCarousel /></div>
+        <div className="home__section__content home__section__content--who"><PeopleCarousel /></div>
       </div>
       
     </div>

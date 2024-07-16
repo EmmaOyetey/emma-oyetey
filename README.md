@@ -147,3 +147,189 @@ teams - archery dog walking bringing yurself to work
 
 --------------------------------------------------------------------------------
 
+To achieve the functionality where the headers (WHERE, WHAT, and WHO) appear in line and the respective content sections only appear when clicked, we need to:
+
+Update the JSX to manage the visibility of the content sections.
+Add state management to handle which section is currently active.
+Update the CSS to properly style the headers and the hidden/shown states of the content sections.
+Step 1: Update the JSX and add state management
+Add state to manage the active section and update the handlers for the clicks:
+
+tsx
+Copy code
+import { useState, useEffect } from "react";
+import "./Home.scss";
+import About from "../About/About";
+import OrganisationsCarousel from "../OrganisationsCarousel/OrganisationsCarousel";
+import ExperienceCarousel from "../ExperienceCarousel/ExperienceCarousel";
+import PeopleCarousel from "../PeopleCarousel/PeopleCarousel";
+import Where from "../Where/Where";
+
+const Home = () => {
+  const [activeSection, setActiveSection] = useState<string | null>(null);
+
+  const handleHeaderClick = (section: string) => {
+    setActiveSection(activeSection === section ? null : section);
+  };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const aboutMe = document.querySelector(".home__about-me");
+      if (aboutMe) {
+        const aboutMeTop = aboutMe.getBoundingClientRect().top;
+        const aboutMeVisible =
+        aboutMeTop <= window.innerHeight / 2;
+
+        if (aboutMeVisible) {
+          aboutMe.classList.add("visible");
+        } else {
+          aboutMe.classList.remove("visible");
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  return (
+    <div className="home">
+      <div className="home__landing-page">
+        <h1 className="home__landing-page__name">Emma Oyetey</h1>
+        <h3 className="home__landing-page__overview">
+          Education, Volunteering, Software Engineering
+        </h3>
+      </div>
+
+      <div className="home__about-me">
+        <div className="home__about-me--content">
+          <div className="home__content-section home__content-section--about ">
+            <About />
+          </div>
+        </div>
+      </div>
+
+      <div className="home__sections">
+        <h2 
+          className={`home__section__header ${activeSection === "where" ? "active" : ""}`} 
+          onClick={() => handleHeaderClick("where")}
+        >
+          --- WHERE ---
+        </h2>
+        <h2 
+          className={`home__section__header ${activeSection === "what" ? "active" : ""}`} 
+          onClick={() => handleHeaderClick("what")}
+        >
+          --- WHAT ---
+        </h2>
+        <h2 
+          className={`home__section__header ${activeSection === "who" ? "active" : ""}`} 
+          onClick={() => handleHeaderClick("who")}
+        >
+          --- WHO ---
+        </h2>
+      </div>
+
+      {activeSection === "where" && (
+        <div className="home__section__content home__section__content--where">
+          <Where />
+        </div>
+      )}
+
+      {activeSection === "what" && (
+        <div className="home__section__content home__section__content--what">
+          <ExperienceCarousel />
+        </div>
+      )}
+
+      {activeSection === "who" && (
+        <div className="home__section__content home__section__content--who">
+          <PeopleCarousel />
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default Home;
+Step 2: Update the SCSS
+Add the necessary styles for the headers and content sections:
+
+scss
+Copy code
+@use "../../styles/variables" as *;
+
+.home {
+  padding: 2rem;
+  margin: 1rem;
+  
+  &__landing-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+
+    &__name {
+      font-size: 10rem;
+      margin-bottom: 1rem;
+    }
+
+    &__overview {
+      font-size: 1.3rem;
+      color: $color-white;
+    }
+  }
+
+  &__about-me {
+    height: 100vh;
+    display: flex;
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    opacity: 0;
+    transform: translateY(20px);
+
+    &.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  &__sections {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2rem;
+    
+    &__header {
+      cursor: pointer;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: $color-black;
+
+      &.active {
+        color: $color-primary; // Highlight the active section
+      }
+    }
+  }
+
+  &__section__content {
+    display: none;
+    &.home__section__content--where {
+      display: block;
+    }
+    &.home__section__content--what {
+      display: block;
+    }
+    &.home__section__content--who {
+      display: block;
+    }
+  }
+}
+Explanation:
+State Management: The activeSection state tracks which section header is clicked. When a header is clicked, the corresponding content section becomes visible.
+Header Click Handlers: The handleHeaderClick function toggles the visibility of the content sections based on the clicked header.
+Conditional Rendering: The content sections (Where, What, and Who) are conditionally rendered based on the activeSection state.
+Styling:
+Headers: The headers are styled to indicate the active section using the .active class.
+Content Sections: Initially, the content sections are hidden (display: none). When the corresponding header is clicked, the content section becomes visible (display: block).
+This setup will display the headers in line and show the respective content sections only when their headers are clicked, providing a clean and interactive user experience.

@@ -3,15 +3,15 @@
 .about {
   padding: 2rem;
   display: flex;
-  align-items: center;
+  //align-items: center;
   justify-content: space-between;
   opacity: 0.85;
-  box-shadow: 0 0.325rem 0.3rem rgba(0, 0, 0, 0.1);
-  border: 0.1rem solid rgba(255, 255, 255, 0.05);
-  border-radius: 0.7rem;
-  background-color: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
+  // box-shadow: 0 0.325rem 0.3rem rgba(0, 0, 0, 0.1);
+  // border: 0.1rem solid rgba(255, 255, 255, 0.05);
+  // border-radius: 0.7rem;
+  // background-color: rgba(255, 255, 255, 0.08);
+  // backdrop-filter: blur(15px);
+  //-webkit-backdrop-filter: blur(15px);
   text-decoration: none !important;
   position: relative;
   border-radius: 2rem;
@@ -26,7 +26,7 @@
   } 
     
   &__image {
-    width: 100%;
+    width: 70%;
     height: auto;
     object-fit: contain;
     filter: blur(0.2rem);
@@ -38,10 +38,11 @@
 
   &__content {
     padding-left: 3rem;
+    //align-content: flex-start;
   }
 
   p {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 
 }

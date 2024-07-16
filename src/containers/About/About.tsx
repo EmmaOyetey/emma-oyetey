@@ -1,5 +1,8 @@
 import myImage from "../../assets/images/me cut up4.png";
 import "./About.scss";
+//import LinkedInIcon from '@mui/icons-material/LinkedIn';
+//import GitHubIcon from '@mui/icons-material/GitHub';
+
 const About = () => {
   return (
     <>
@@ -9,7 +12,7 @@ const About = () => {
         </div>
         <div className="about__content">
           <h1 className="about__title">
-            <span style={{ color: "black" }}></span> ME
+            <span style={{ color: "black" }}></span> --- ME ---
           </h1>
           <div className="about__info">
             <p>
