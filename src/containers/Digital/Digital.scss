@@ -1,0 +1,5 @@
+.digital__projects-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping to the next line if there are more projects */
+    justify-content: space-around; /* Adjust space between the projects */
+}

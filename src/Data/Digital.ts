@@ -31,6 +31,26 @@ const Project : DigitalType[] = [
         skills: ["React", "SCSS",],
         more:"",
       },
+      {
+        name: "TuneTeezr",
+        organisation: [10],
+        image: "../../public/digitalProjects/TuneTeezer2.png",
+        demoVideo: "../../public/digitalProjects/tuneTeezrDemo.mp4",
+        codeLink: "https://github.com/EmmaOyetey/game",
+        githubLink: "https://emmaoyetey.github.io/game/",
+        skills: ["Typescript", "Vite", "SCSS", "DOM"],
+        more:"",
+      },
+      {
+        name: "Raven",
+        organisation: [10],
+        image: "../../public/digitalProjects/raven4.png",
+        demoVideo: "../../public/digitalProjects/ravenDemo.mp4",
+        codeLink: "https://github.com/EmmaOyetey/game",
+        githubLink: "https://emmaoyetey.github.io/game/",
+        skills: ["Java", "Typescript", "Vite", "SCSS", "Spring", "MySQL"],
+        more:"Inspired by my work in the charitable sector, and my passion for education and working alongside young people.This project aims to bridge the gap between organisations and those seeking assistance.Providing the opportunity to easily find and connect with the services they need and want..",
+      },
     ];
     
 export default Project;

@@ -1,11 +1,11 @@
 import React from 'react';
-//import "./Where.scss";
+import "./Digital.scss";
 import projects from '../../Data/Digital';
 import DigitalProjectCard from '../../components/DigitalProjectCard/DigitalProjectCard';
 
 const Digital: React.FC = () => {
   return (
-    <div className="where-container">
+    <div className="digital__projects-container">
       {projects.map((project, index) => (
         <DigitalProjectCard
         key={index} 
