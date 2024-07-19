@@ -3,7 +3,7 @@
 .digital {
     &__project {
         width: 100%;
-        max-width: 45rem; /* Adjusted for half-screen width */
+        max-width: 50rem; /* Adjusted for half-screen width */
         background-color: rgba(255, 255, 255, 0.08);
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
@@ -38,6 +38,7 @@
             overflow: hidden;
             background-color: $color-white;
             margin-right: 1rem; /* Space between image and about section */
+            margin-top: 1.5rem;
         }
 
         &__image {
@@ -104,14 +105,14 @@
 
         &__skills {
             font-size: 1.4rem;
-            color: #555;
+            color: whitesmoke;
             padding: 1rem 0; /* Adjusted padding */
             border-top: 1px solid #ccc;
             text-align: left;
         }
 
         &__about {
-            flex: 1; /* Takes remaining space in top section */
+            flex: 1; ;/* Takes remaining space in top section */
             font-size: 1.4rem;
             color: #888;
             padding: 0 1rem; /* Adjusted padding */
