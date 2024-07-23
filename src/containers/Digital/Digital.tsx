@@ -1,83 +1,105 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React from 'react';
 import "./Digital.scss";
 import projects from '../../Data/Digital';
 import DigitalProjectCard from '../../components/DigitalProjectCard/DigitalProjectCard';
 
 const Digital: React.FC = () => {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const [thumbPosition, setThumbPosition] = useState(0);
-  const [isDragging, setIsDragging] = useState(false);
-
-  const handleScroll = () => {
-    if (containerRef.current) {
-      const { scrollLeft, scrollWidth, clientWidth } = containerRef.current;
-      const maxScrollLeft = scrollWidth - clientWidth;
-      const scrollFraction = scrollLeft / maxScrollLeft;
-      const thumbMaxPosition = clientWidth - (clientWidth * 0.5); // Adjust 0.5 based on the thumb width
-      setThumbPosition(scrollFraction * thumbMaxPosition);
-    }
-  };
-
-  const handleThumbMouseDown = (event: React.MouseEvent<HTMLDivElement>) => {
-    setIsDragging(true);
-  };
-
-  const handleThumbMouseMove = (event: MouseEvent) => {
-    if (isDragging && containerRef.current) {
-      const { clientWidth, scrollWidth } = containerRef.current;
-      const thumbMaxPosition = clientWidth - (clientWidth * 0.5); // Adjust 0.5 based on the thumb width
-      const newThumbPosition = Math.max(0, Math.min(thumbMaxPosition, event.clientX - containerRef.current.offsetLeft));
-      setThumbPosition(newThumbPosition);
-      const scrollFraction = newThumbPosition / thumbMaxPosition;
-      containerRef.current.scrollLeft = scrollFraction * (scrollWidth - clientWidth);
-    }
-  };
-
-  const handleThumbMouseUp = () => {
-    setIsDragging(false);
-  };
-
-  useEffect(() => {
-    document.addEventListener('mousemove', handleThumbMouseMove);
-    document.addEventListener('mouseup', handleThumbMouseUp);
-    return () => {
-      document.removeEventListener('mousemove', handleThumbMouseMove);
-      document.removeEventListener('mouseup', handleThumbMouseUp);
-    };
-  }, [isDragging]);
-
-  useEffect(() => {
-    if (containerRef.current) {
-      containerRef.current.addEventListener('scroll', handleScroll);
-    }
-    return () => {
-      if (containerRef.current) {
-        containerRef.current.removeEventListener('scroll', handleScroll);
-      }
-    };
-  }, []);
-
   return (
     <div className="digital">
-      <div className="digital__projects-container" ref={containerRef}>
+      <div className="digital__projects-container">
         {projects.map((project, index) => (
           <div className="digital__project-card" key={index}>
             <DigitalProjectCard project={project} />
           </div>
         ))}
       </div>
-      <div className="digital__scroll-bar">
-        <div
-          className="digital__scroll-thumb"
-          style={{ left: `${thumbPosition}px` }}
-          onMouseDown={handleThumbMouseDown}
-        />
-      </div>
     </div>
   );
 };
 
 export default Digital;
+
+
+// import React, { useRef, useEffect, useState } from 'react';
+// import "./Digital.scss";
+// import projects from '../../Data/Digital';
+// import DigitalProjectCard from '../../components/DigitalProjectCard/DigitalProjectCard';
+
+// const Digital: React.FC = () => {
+//   const containerRef = useRef<HTMLDivElement>(null);
+//   const [thumbPosition, setThumbPosition] = useState(0);
+//   const [isDragging, setIsDragging] = useState(false);
+
+//   const handleScroll = () => {
+//     if (containerRef.current) {
+//       const { scrollLeft, scrollWidth, clientWidth } = containerRef.current;
+//       const maxScrollLeft = scrollWidth - clientWidth;
+//       const scrollFraction = scrollLeft / maxScrollLeft;
+//       const thumbMaxPosition = clientWidth - (clientWidth * 0.5); // Adjust 0.5 based on the thumb width
+//       setThumbPosition(scrollFraction * thumbMaxPosition);
+//     }
+//   };
+
+//   const handleThumbMouseDown = (event: React.MouseEvent<HTMLDivElement>) => {
+//     setIsDragging(true);
+//   };
+
+//   const handleThumbMouseMove = (event: MouseEvent) => {
+//     if (isDragging && containerRef.current) {
+//       const { clientWidth, scrollWidth } = containerRef.current;
+//       const thumbMaxPosition = clientWidth - (clientWidth * 0.5); // Adjust 0.5 based on the thumb width
+//       const newThumbPosition = Math.max(0, Math.min(thumbMaxPosition, event.clientX - containerRef.current.offsetLeft));
+//       setThumbPosition(newThumbPosition);
+//       const scrollFraction = newThumbPosition / thumbMaxPosition;
+//       containerRef.current.scrollLeft = scrollFraction * (scrollWidth - clientWidth);
+//     }
+//   };
+
+//   const handleThumbMouseUp = () => {
+//     setIsDragging(false);
+//   };
+
+//   useEffect(() => {
+//     document.addEventListener('mousemove', handleThumbMouseMove);
+//     document.addEventListener('mouseup', handleThumbMouseUp);
+//     return () => {
+//       document.removeEventListener('mousemove', handleThumbMouseMove);
+//       document.removeEventListener('mouseup', handleThumbMouseUp);
+//     };
+//   }, [isDragging]);
+
+//   useEffect(() => {
+//     if (containerRef.current) {
+//       containerRef.current.addEventListener('scroll', handleScroll);
+//     }
+//     return () => {
+//       if (containerRef.current) {
+//         containerRef.current.removeEventListener('scroll', handleScroll);
+//       }
+//     };
+//   }, []);
+
+//   return (
+//     <div className="digital">
+//       <div className="digital__projects-container" ref={containerRef}>
+//         {projects.map((project, index) => (
+//           <div className="digital__project-card" key={index}>
+//             <DigitalProjectCard project={project} />
+//           </div>
+//         ))}
+//       </div>
+//       <div className="digital__scroll-bar">
+//         <div
+//           className="digital__scroll-thumb"
+//           style={{ left: `${thumbPosition}px` }}
+//           onMouseDown={handleThumbMouseDown}
+//         />
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default Digital;
 
 // import React from 'react';
 // import "./Digital.scss";

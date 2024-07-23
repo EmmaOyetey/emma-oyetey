@@ -3,7 +3,7 @@
 .digital {
     &__project {
         width: 100%;
-        max-width: 50rem; /* Adjusted for half-screen width */
+        max-width: 47rem; 
         background-color: rgba(255, 255, 255, 0.08);
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
@@ -14,16 +14,16 @@
         text-align: left;
         border-bottom: 0.05rem solid rgba(255, 255, 255, 0.1);
         border-left: 0.1rem solid rgba(255, 255, 255, 0.1);
-        margin: 2rem; /* Adjusted margin for spacing */
+        margin: 1rem; 
         display: flex;
         flex-direction: column;
-        overflow-y: auto; /* Added scrollbar for overflow content */
-        max-height: 100vh; /* Ensures it doesn't exceed viewport height */
+        // overflow-y: auto; /* Added scrollbar for overflow content */
+        // max-height: 100vh; /* Ensures it doesn't exceed viewport height */
 
         &__top {
             display: flex;
             justify-content: space-between;
-            align-items: flex-start; /* Align items to the top */
+            //align-items: flex-start; 
         }
 
         &__bottom {
@@ -32,13 +32,14 @@
 
         &__image-container {
             position: relative;
-            width: 35%; /* Adjusted for side-by-side layout */
-            padding-top: 45%; /* Aspect ratio for the image */
+            width: 25%; 
+            padding-top: 28%;
             border-radius: 0.6rem;
             overflow: hidden;
             background-color: $color-white;
-            margin-right: 1rem; /* Space between image and about section */
+            margin-right: 1rem; 
             margin-top: 1.5rem;
+            object-fit: contain;
         }
 
         &__image {
@@ -47,7 +48,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            object-fit: cover; /* Ensures the image is trimmed to fit the set size */
+            object-fit: cover; 
         }
 
         &__play-icon {
@@ -56,7 +57,7 @@
             right: 1rem;
             width: 3rem;
             height: 3rem;
-            color: $color-black;
+            color: blue;
             cursor: pointer;
             transition: color 0.3s;
 
@@ -73,12 +74,12 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1rem 0; /* Adjusted padding */
-            border-top: 1px solid $color-off-white; /* Add a top border beneath the image */
+            padding: 1rem 0; 
+            border-top: 1px solid $color-off-white; 
         }
 
         &__title {
-            font-size: 1.8rem;
+            font-size: 1.4rem;
             font-weight: bold;
             margin: 0;
         }
@@ -91,8 +92,8 @@
             &--code {
                 margin-left: 1rem;
                 svg {
-                    width: 2rem;
-                    height: 2rem;
+                    width: 1.5rem;
+                    height: 1.5rem;
                     color: white;
                     transition: color 0.3s;
 
@@ -104,24 +105,27 @@
         }
 
         &__skills {
-            font-size: 1.4rem;
+            font-size: 1rem;
             color: whitesmoke;
-            padding: 1rem 0; /* Adjusted padding */
+            padding: 1rem 0; 
             border-top: 1px solid #ccc;
             text-align: left;
         }
 
         &__about {
-            flex: 1; ;/* Takes remaining space in top section */
-            font-size: 1.4rem;
-            color: #888;
-            padding: 0 1rem; /* Adjusted padding */
+            flex: 1;
+            padding: 0 1rem; 
             border-top: 1px solid #ccc;
             text-align: left;
+            display: flex;
+            align-items: center; 
 
             &--content {
-                font-size: 1.2rem;
+                font-size: 0.9rem;
                 margin-top: 1rem;
+                margin-bottom: 1rem;
+                display: flex;
+                align-items: center; 
             }
         }
 
