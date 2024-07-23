@@ -27,8 +27,9 @@ const experience: ExperienceType[] = [
         "HTML5", "CSS3", "SASS", "JavaScript", "React", "Jest","Cypress", "React Testing Library", "Github Actions", "TDD", "GCP", "CI/CD", "OOP", "Java", "Spring", "SQL",
     ],
     tags: [
-      "Education",
-      "",
+      "Software Engineering",
+      "Agile Project Management",
+      "Full Stack",
     ],
     achievements: {
         item: [
@@ -71,7 +72,7 @@ const experience: ExperienceType[] = [
     ],
     tags: [
       "Education",
-      "",
+      "Inclusion",
     ],
     achievements: {
         item: [
@@ -176,12 +177,12 @@ const experience: ExperienceType[] = [
         "Drupral", "RDB", "Survey Monkey", "Twillio - SendGrid", "Trello", "Slack", "Airtable", "Microsoft Excel", "Google Sheets", "Micorsoft Teams", "JamBoard", "Miro", "MailChimp", "xero", "BreatheHR",
     ],
     tags: [
+      "Operations",
       "GDPR",
       "Service Design",
       "Customer Excellence",
-      "Operations",
       "People policy",
-      "Volunteer Management"
+      "Volunteers"
     ],
     achievements: {
       item :
@@ -250,6 +251,7 @@ const experience: ExperienceType[] = [
         "",
     ],
     tags: [
+      "Programme Design",
       "Curriculum mapping",
       "Volunteer Management",
     ],
@@ -279,8 +281,8 @@ const experience: ExperienceType[] = [
         areas_responsibility: [
           "1-2-1 delivery", 
         ],
-        start_date:"06/2014" ,
-        finish_date:"06/2017",
+        start_date:"05/2019" ,
+        finish_date:"11/2019",
         }
     ],
     notable: [
@@ -353,11 +355,11 @@ const experience: ExperienceType[] = [
         "NCS",
     ],
     tags: [
-      "stakeholder management",
-      "Programme design & delivery",
+      "Youth involvement",
+      "Stakeholder management",
+      "Programmes",
       "Grant management",
       "Policy",
-      "Youth involvement"
     ],
     achievements: {
      item :[
@@ -419,6 +421,7 @@ const experience: ExperienceType[] = [
         "",
     ],
     tags: [
+      "Education",
       "Management",
       "Quality & Inspection",
       "Policy",
@@ -504,7 +507,7 @@ const experience: ExperienceType[] = [
         "",
     ],
     tags: [
-      "",
+      "Research",
     ],
     achievements: {
      item :[
@@ -540,7 +543,10 @@ const experience: ExperienceType[] = [
         "",
     ],
     tags: [
-      "",
+      "Mathematics", 
+      "GCSE",
+      "A-Level",
+      "Pastoral"
     ],
     achievements: {
      item :[

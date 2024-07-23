@@ -32,7 +32,7 @@ const Home = () => {
       <div className="home__landing-page">
         <h1 className="home__landing-page__name">Emma Oyetey</h1>
         <h3 className="home__landing-page__overview">
-          Education, Volunteering, Software Engineering
+        github.com/EmmaOyetey
         </h3>
       </div>
 
