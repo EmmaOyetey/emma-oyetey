@@ -1,0 +1,35 @@
+.scroll-arrow {
+    position: fixed; // Make it fixed so it's always visible
+    bottom: 2rem;
+    right: 2rem;
+    opacity: 0;
+    animation: fadeIn 0.5s forwards, pulseArrow 2s infinite 1s;
+  
+    svg {
+      width: 2rem;
+      height: auto;
+    }
+  
+    &.animate {
+      animation: fadeIn 0.5s forwards, pulseArrow 2s infinite 1s;
+    }
+  }
+  
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes pulseArrow {
+    0%,
+    20% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
