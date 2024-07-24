@@ -26,6 +26,22 @@ const DigitalProjectCard: React.FC<DigitalProjectCardProps> = ({ project }) => {
         setOpen(false);
     };
 
+    const openInNewWindow = (url: string, width: number, height: number) => {
+        const left = (window.screen.width / 2) - (width / 2);
+        const top = (window.screen.height / 2) - (height / 2);
+        window.open(url, '_blank', `width=${width},height=${height},top=${top},left=${left}`);
+    };
+
+    const handleEyeClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+        e.preventDefault();
+        openInNewWindow(project.githubLink, 800, 600);
+    };
+
+    const handleCodeClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+        e.preventDefault();
+        openInNewWindow(project.codeLink, 800, 600);
+    };
+
     return (
         <div className="digital__project">
             <div className="digital__project__top">
@@ -48,10 +64,10 @@ const DigitalProjectCard: React.FC<DigitalProjectCardProps> = ({ project }) => {
                 <div className="digital__project__header">
                     <h2 className="digital__project__title">{project.name}</h2>
                     <div className="digital__project__link">
-                        <a href={project.githubLink} className="digital__project__link--eye">
+                        <a href={project.githubLink} className="digital__project__link--eye" onClick={handleEyeClick}>
                             <VisibilityIcon />
                         </a>
-                        <a href={project.codeLink} className="digital__project__link--code">
+                        <a href={project.codeLink} className="digital__project__link--code" onClick={handleCodeClick}>
                             <CodeIcon />
                         </a>
                     </div>
