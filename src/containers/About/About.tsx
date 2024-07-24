@@ -6,34 +6,28 @@ import "./About.scss";
 const About = () => {
   return (
     <>
-      <div className="about">
+    <div className="about">
         <div className="about__image-container">
           <img className="about__image" src={myImage} alt="Image of Emma" />
         </div>
         <div className="about__content">
-          <h1 className="about__title">
-            <span style={{ color: "black" }}></span> --- ME ---
-          </h1>
-          <div className="about__info">
             <p>
-              People focused and data driven; prioritising
-              relationships, and empathy, alongside taking
-              decisions based on objective data and evidence.
+            People-focused and data-driven; prioritising relationships and empathy while making decisions based on evidence and data.
             </p>
             <br />
             <p>
-              Creative, integrous and determined; enjoying building trusted
-              relationships as part of diverse cross functional teams.
+            Creative, honest, and determined; valueing opportunities to work within organisations with a strong culture of collaboration and learning  
             </p>
             <br />
             <p>
-              Passionate about Human-centred service design , and working within
-              organisations that have a strong culture of collaboration and
-              learning.
+            Committed to building trusted relationships; embracing diversity and inclusion 
             </p>
-          </div>
+            <br />
+            <p>
+            Passionate and expereinced in education, community action, and Human-centred service design
+            </p>
         </div>
-      </div>
+    </div>  
     </>
   );
 };
