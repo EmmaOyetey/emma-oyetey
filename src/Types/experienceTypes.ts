@@ -17,6 +17,7 @@ export type OrganisationType = {
   export type AchievementType = {
     item: string [];
     link: string [];
+    link_text: string [];
   };
 
  export type ExperienceType = {

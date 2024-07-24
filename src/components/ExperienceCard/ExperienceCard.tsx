@@ -39,7 +39,7 @@ const ExpCard = ({ experience }: ExpCardProps) => {
              <ExpandMoreIcon className={`organisation-info__toggle-icon ${showAbout ? 'expanded' : ''}`} />About
           </h3>
           {showAbout && (
-            <p className="organisation-info__overview">{experience.organisation.description ?? `No description available`}</p>
+            <p className="organisation-info__overview">{experience.organisation.overview ?? `No description available`}</p>
           )}
         </div>
 
@@ -58,7 +58,7 @@ const ExpCard = ({ experience }: ExpCardProps) => {
 
         <div className="organisation-info__section">
           <h3 className="organisation-info__toggle-header" onClick={() => setShowLinks(!showLinks)}>
-            <ExpandMoreIcon className={`organisation-info__toggle-icon ${showLinks ? 'expanded' : ''}`} />Explore My Work on the web 
+            <ExpandMoreIcon className={`organisation-info__toggle-icon ${showLinks ? 'expanded' : ''}`} />Explore My Work 
           </h3>
           {showLinks && (
             <ul className="organisation-info__links-list">
