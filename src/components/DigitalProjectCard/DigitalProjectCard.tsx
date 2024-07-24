@@ -46,7 +46,7 @@ const DigitalProjectCard: React.FC<DigitalProjectCardProps> = ({ project }) => {
             </div>
             <div className="digital__project__bottom">
                 <div className="digital__project__header">
-                    <h1 className="digital__project__title">{project.name}</h1>
+                    <h2 className="digital__project__title">{project.name}</h2>
                     <div className="digital__project__link">
                         <a href={project.githubLink} className="digital__project__link--eye">
                             <VisibilityIcon />
@@ -56,7 +56,7 @@ const DigitalProjectCard: React.FC<DigitalProjectCardProps> = ({ project }) => {
                         </a>
                     </div>
                 </div>
-                <h2 className="digital__project__skills">{project.skills.join(', ')}</h2>
+                <h3 className="digital__project__skills">{project.skills.join(', ')}</h3>
             </div>
 
             <Dialog open={open} onClose={handleClose} maxWidth="md">
