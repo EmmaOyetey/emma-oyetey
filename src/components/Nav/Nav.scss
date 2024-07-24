@@ -1,0 +1,113 @@
+@use "../../styles/variables" as *;
+
+.nav-bar {
+    position: fixed;  // Fixed position ensures it stays at the bottom
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white; // Dark background for contrast
+   // color: black; // White text
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1); // Light shadow for separation
+    display: flex;
+    justify-content: center; // Centering the list horizontally
+    z-index: 1000; // Ensure it stays on top
+    padding: 0 1rem; // Padding to the left and right
+}
+
+.nav-bar__list {
+    display: flex;
+    justify-content: space-around; // Space between items
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%; // Make sure it takes full width
+}
+
+.nav-bar__item {
+    font-size: 1rem;
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    
+    a {
+        color: black; // White text color
+        font-family: $font-secondary;
+        text-decoration: none; // Remove underline
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: #00bcd4; // Color change on hover
+        }
+    }
+}
+
+// .nav-bar {
+//     position: fixed;  // Fixed position ensures it stays at the bottom
+//     bottom: 0;
+//     left: 0;
+//     width: 100%;
+//     background-color: #333; // Dark background for contrast
+//     color: #fff; // White text
+//     box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1); // Light shadow for separation
+//     display: flex;
+//     justify-content: center; // Centering the list horizontally
+//     z-index: 1000; // Ensure it stays on top
+//     padding: 0 1rem; // Padding to the left and right
+// }
+
+// .nav-bar__list {
+//     display: flex;
+//     justify-content: space-between; // Space between items
+//     align-items: center;
+//     list-style: none;
+//     margin: 0;
+//     padding: 0;
+//     width: 100%; // Make sure it takes full width
+// }
+
+// .nav-bar__item {
+//     font-size: 1rem;
+//     padding: 1rem;
+//     cursor: pointer;
+//     transition: color 0.3s ease;
+
+//     &:hover {
+//         color: #00bcd4; // Color change on hover
+//     }
+// }
+
+
+// .nav-bar {
+//     position: sticky;
+//     bottom: 0;
+//     width: 100%;
+//     background-color: #333; // Dark background for contrast
+//     color: #fff; // White text
+//     box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1); // Light shadow for separation
+//     display: flex;
+//     justify-content: center; // Centering the list horizontally
+//     z-index: 1000; // Ensure it stays on top
+// }
+
+// .nav-bar__list {
+//     display: flex;
+//     justify-content: space-between; // Space between items
+//     align-items: center;
+//     list-style: none;
+//     margin: 0;
+//     padding: 0 1rem; // Padding to the left and right
+//     width: 100%; // Make sure it takes full width
+// }
+
+// .nav-bar__item {
+//     font-size: 1rem;
+//     padding: 1rem;
+//     cursor: pointer;
+//     transition: color 0.3s ease;
+
+//     &:hover {
+//         color: #00bcd4; // Color change on hover
+//     }
+// }

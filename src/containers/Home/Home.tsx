@@ -1,10 +1,11 @@
 import { useEffect } from "react";
 import "./Home.scss";
 import About from "../About/About";
-import OrganisationsCarousel from "../OrganisationsCarousel/OrganisationsCarousel";
+//import OrganisationsCarousel from "../OrganisationsCarousel/OrganisationsCarousel";
 import ExperienceCarousel from "../ExperienceCarousel/ExperienceCarousel";
 import PeopleCarousel from "../PeopleCarousel/PeopleCarousel";
 import Where from "../Where/Where";
+import NavBar from "../../components/Nav/Nav";
 
 const Home = () => {
   useEffect(() => {
@@ -36,30 +37,33 @@ const Home = () => {
         </h3>
       </div>
 
-      <div className="home__about-me">
+      <div id="about-me"className="home__about-me">
         <div className="home__about-me--content">
+        <h2 className="home__section__header home__section__header--where">--- ME ---</h2>
           <div className="home__content-section home__content-section--about ">
             <About />
           </div>
         </div>
       </div>
 
-      <div className="home__section home__section--where">
+      <div id="where" className="home__section home__section--where">
         <h2 className="home__section__header home__section__header--where">--- WHERE ---</h2>
         <div className="home__section__content home__section__content--where" ><Where /></div>
       </div>
       
       
-      <div className="home__section home__section--what">
+      <div id="what" className="home__section home__section--what">
         <p className="home__section__header home__section__header--what">--- WHAT ---</p>
         <div className="home__section__content home__section__content--what"><ExperienceCarousel /></div>
       </div>
       
-      <div className="home__section home__section--who">
+      <div id="who" className="home__section home__section--who">
         <p className="home__section__header home__section__header--who">--- WHO ---</p>
         <div className="home__section__content home__section__content--who"><PeopleCarousel /></div>
       </div>
-      
+
+      <NavBar />
+
     </div>
   );
 };
