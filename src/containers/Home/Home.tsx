@@ -37,9 +37,9 @@ const Home = () => {
         </h3>
       </div>
 
-      <div id="about-me"className="home__about-me">
+      <div id="about-me" className="home__about-me">
         <div className="home__about-me--content">
-        <h2 className="home__section__header home__section__header--where">--- ME ---</h2>
+        <h2 className="home__section__header home__section__header--about-me">--- ME ---</h2>
           <div className="home__content-section home__content-section--about ">
             <About />
           </div>
@@ -48,18 +48,24 @@ const Home = () => {
 
       <div id="where" className="home__section home__section--where">
         <h2 className="home__section__header home__section__header--where">--- WHERE ---</h2>
-        <div className="home__section__content home__section__content--where" ><Where /></div>
+        <div className="home__section__content home__section__content--where" >
+          <Where /></div>
       </div>
       
       
-      <div id="what" className="home__section home__section--what">
-        <p className="home__section__header home__section__header--what">--- WHAT ---</p>
-        <div className="home__section__content home__section__content--what"><ExperienceCarousel /></div>
+      <div id="what" >
+        <div className="home__what-style-container">styling for a tag</div>
+        <div  className="home__section home__section--what">
+          <p className="home__section__header home__section__header--what">--- WHAT ---</p>
+          <div className="home__section__content home__section__content--what">
+            <ExperienceCarousel /></div>
+        </div>
       </div>
-      
+
       <div id="who" className="home__section home__section--who">
         <p className="home__section__header home__section__header--who">--- WHO ---</p>
-        <div className="home__section__content home__section__content--who"><PeopleCarousel /></div>
+        <div className="home__section__content home__section__content--who">
+          <PeopleCarousel /></div>
       </div>
 
       <NavBar />
