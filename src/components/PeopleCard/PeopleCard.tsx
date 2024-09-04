@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import "./PeopleCard.scss";
-import { Card, CardContent } from '@mui/material';
+import { CardContent } from '@mui/material';
 import { PeopleType } from '../../Types/peopleTypes';
 
 type PeopleCardProps = {

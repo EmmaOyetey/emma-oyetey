@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import "./OrganisationCard.scss";
 import NorthEastIcon from '@mui/icons-material/NorthEast';
 import NorthWestIcon from '@mui/icons-material/NorthWest';
-import {ExperienceType} from '../../Types/experienceTypes';
+//import {ExperienceType} from '../../Types/experienceTypes';
 import { Link } from 'react-router-dom'; 
 
 type OrganisationCardProps = {
