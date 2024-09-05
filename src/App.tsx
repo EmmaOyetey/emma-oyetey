@@ -34,7 +34,7 @@ const getExperienceByOrganisationName = (organisationName: string): ExperienceTy
   
 
   return (
-      <Router basename="/emma-oyetey">
+      <Router>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/organisation/:organisationName" element={<ExpByOrgInfoLoader getExperienceByOrganisationName={getExperienceByOrganisationName} />} />
