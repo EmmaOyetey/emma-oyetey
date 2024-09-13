@@ -1,4 +1,4 @@
-import myImage from "../../assets/images/me cut up4.png";
+import myImage from "../../assets/images/me-cut-up4.png";
 import "./About.scss";
 //import LinkedInIcon from '@mui/icons-material/LinkedIn';
 //import GitHubIcon from '@mui/icons-material/GitHub';
