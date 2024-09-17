@@ -1,9 +1,9 @@
-@use "../../styles/variables" as *;
+ @use "../../styles/variables" as *;
 
-.home {
+ .home {
   padding: 2rem;
   margin: 1rem;
-  
+
   &__landing-page {
     display: flex;
     flex-direction: column;
@@ -11,6 +11,8 @@
     justify-content: center;
     height: 100vh;
     text-align: center;
+    animation: fadeIn 1s ease-out;
+    opacity: 1;
 
     &__name {
       font-size: 10rem;
@@ -23,77 +25,127 @@
     }
   }
 
-  &__about-me {
-    height: 100vh;
-    display: flex;
-    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  &__about-me,
+  &__section {
     opacity: 0;
     transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  }
 
-    &.visible {
+  &__about-me.visible,
+  &__section.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  // Additional sections
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
       opacity: 1;
       transform: translateY(0);
     }
   }
+}
 
-  &__section {
-    display: flex;
-    margin-bottom: 7rem;
-    justify-content: center;
-    //align-items: center;
+// .home {
+//   padding: 2rem;
+//   margin: 1rem;
+  
+//   &__landing-page {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     justify-content: center;
+//     height: 100vh;
+//     text-align: center;
 
-    &--where {
-      flex-direction: column;
-    }
+//     &__name {
+//       font-size: 10rem;
+//       margin-bottom: 1rem;
+//     }
 
-    &--what {
-      justify-content: space-around;
-    }
+//     &__overview {
+//       font-size: 1.3rem;
+//       color: $color-white;
+//     }
+//   }
 
-    &--who {
-      flex-direction: row-reverse;
-      justify-content: space-around;
-      align-items: center;
-      margin-top: 15rem;
+//   &__about-me {
+//     height: 100vh;
+//     display: flex;
+//     transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+//     opacity: 0;
+//     transform: translateY(20px);
 
-    }
+//     &.visible {
+//       opacity: 1;
+//       transform: translateY(0);
+//     }
+//   }
+
+//   &__section {
+//     display: flex;
+//     margin-bottom: 7rem;
+//     justify-content: center;
+//     //align-items: center;
+
+//     &--where {
+//       flex-direction: column;
+//     }
+
+//     &--what {
+//       justify-content: space-around;
+//     }
+
+//     &--who {
+//       flex-direction: row-reverse;
+//       justify-content: space-around;
+//       align-items: center;
+//       margin-top: 15rem;
+
+//     }
 
     
-      &__header {
-          &--about-me{
-            text-align: center;
-            margin-top: 10rem;
-            font-size: 2.5rem;
-            //margin-bottom: 1rem;
-          }
+//       &__header {
+//           &--about-me{
+//             text-align: center;
+//             margin-top: 10rem;
+//             font-size: 2.5rem;
+//             //margin-bottom: 1rem;
+//           }
        
-          &--where{
-          text-align: center;
-          font-size: 2.5rem;
-          margin-top: 5rem;
-          margin-bottom: 1rem;
-        }
-          &--what {
-            text-align: center;
-            font-size: 2.3rem;
-          // margin-bottom: 7rem;
-          // display: block;
-            margin-top: 8rem;
-            //margin-right: 7rem;
-          }
+//           &--where{
+//           text-align: center;
+//           font-size: 2.5rem;
+//           margin-top: 5rem;
+//           margin-bottom: 1rem;
+//         }
+//           &--what {
+//             text-align: center;
+//             font-size: 2.3rem;
+//           // margin-bottom: 7rem;
+//           // display: block;
+//             margin-top: 8rem;
+//             //margin-right: 7rem;
+//           }
 
-          &--who {
-            font-size: 2.3rem;
-            margin-left: 3rem;
-          }        
+//           &--who {
+//             font-size: 2.3rem;
+//             margin-left: 3rem;
+//           }        
 
 
 
-    }
-  }
+//     }
+//   }
 
-  &__what-style-container {
-    margin-bottom: 8rem;
-  } 
-}                                           
+//   &__what-style-container {
+//     margin-bottom: 8rem;
+//   } 
+// }                                           
 
