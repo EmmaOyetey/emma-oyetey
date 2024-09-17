@@ -1,15 +1,6 @@
-// @use "./styles/reset";
-// @use "./styles/typography";
-// @use "./styles/variables" as *;
-
-// #root {
-//   margin: 0; 
-//   padding: 0;
-//   height: 100%;
-// }
 
 body {
-  background: linear-gradient(160deg, $color-black 20%, $color-black 70%, $color-secondary 100%);
+  //background: linear-gradient(160deg, $color-black 20%, $color-black 70%, $color-secondary 100%);
   min-height: 100%;
   width: 100%;
   padding: 3rem;
@@ -34,3 +25,4 @@ body {
 // .white-dot-page {
 //   background: none;
 // }
+

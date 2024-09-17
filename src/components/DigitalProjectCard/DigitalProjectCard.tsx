@@ -81,7 +81,7 @@ const DigitalProjectCard: React.FC<DigitalProjectCardProps> = ({ project }) => {
                         <CloseIcon />
                     </IconButton>
                     <video width="100%" controls autoPlay>
-                        <source src={`/digitalProjects/${project.demoVideo}`} type="video/mp4" />
+                        <source src={project.demoVideo} type="video/mp4" />
                         Your browser does not support the video tag.
                     </video>
                 </DialogContent>
