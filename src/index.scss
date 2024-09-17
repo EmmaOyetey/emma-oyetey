@@ -1,2 +1,3 @@
 @import './styles/reset';
-@import 'app';
+@use './styles/typography';
+@use './styles/variables' as *;

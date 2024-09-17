@@ -1,6 +1,6 @@
-@use "./styles/reset";
-@use "./styles/typography";
-@use "./styles/variables" as *;
+// @use "./styles/reset";
+// @use "./styles/typography";
+// @use "./styles/variables" as *;
 
 // #root {
 //   margin: 0; 
@@ -31,6 +31,6 @@ body {
 }
 
 // Specific style for the people page to ensure it overrides the global styles
-.white-dot-page {
-  background: none;
-}
+// .white-dot-page {
+//   background: none;
+// }
